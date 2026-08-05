@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="myAGV_plus" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- PROPERTIES -->
+  <xacro:property name="wheel_radius" value="0.04"/>
+
+  <!-- INCLUDE ROBOT MACROS -->
+  <xacro:include filename="robot/base_isaac.urdf.xacro" ns="base" />
+  <xacro:include filename="robot/wheel_isaac.urdf.xacro" ns="wheel" />
+
+  <!-- BASE -->
+  <xacro:base.base wheel_radius="${wheel_radius}" />
+
+  <!-- WHEELS -->
+  <xacro:wheel.wheel wheel_radius="${wheel_radius}" side="fl" />
+  <xacro:wheel.wheel wheel_radius="${wheel_radius}" side="rl" />
+  <xacro:wheel.wheel wheel_radius="${wheel_radius}" side="fr" />
+  <xacro:wheel.wheel wheel_radius="${wheel_radius}" side="rr" />
+
+</robot>

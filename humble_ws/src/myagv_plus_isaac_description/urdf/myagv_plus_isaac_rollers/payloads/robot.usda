@@ -1,0 +1,627 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.3"
+    }
+    defaultPrim = "myAGV_plus"
+    doc = """Generated from Composed Stage of root layer /tmp/tmpahb_e02y/myAGV_plus.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_myagv_plus_isaac_rollers_cfhsr0et/usdex_myagv_plus_isaac_rollers/myAGV_plus.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_myagv_plus_isaac_rollers_cfhsr0et/temp_myagv_plus_isaac_rollers/myagv_plus_isaac_rollers.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+over "myAGV_plus" (
+    prepend apiSchemas = ["IsaacRobotAPI"]
+)
+{
+    prepend rel isaac:physics:robotJoints = [
+        </myAGV_plus/Physics/lidar_joint>,
+        </myAGV_plus/Physics/fl_wheel_joint>,
+        </myAGV_plus/Physics/rl_wheel_joint>,
+        </myAGV_plus/Physics/fr_wheel_joint>,
+        </myAGV_plus/Physics/rr_wheel_joint>,
+        </myAGV_plus/Physics/fl_roller_0_joint>,
+        </myAGV_plus/Physics/fl_roller_1_joint>,
+        </myAGV_plus/Physics/fl_roller_2_joint>,
+        </myAGV_plus/Physics/fl_roller_3_joint>,
+        </myAGV_plus/Physics/fl_roller_4_joint>,
+        </myAGV_plus/Physics/fl_roller_5_joint>,
+        </myAGV_plus/Physics/fl_roller_6_joint>,
+        </myAGV_plus/Physics/fl_roller_7_joint>,
+        </myAGV_plus/Physics/fl_roller_8_joint>,
+        </myAGV_plus/Physics/rl_roller_0_joint>,
+        </myAGV_plus/Physics/rl_roller_1_joint>,
+        </myAGV_plus/Physics/rl_roller_2_joint>,
+        </myAGV_plus/Physics/rl_roller_3_joint>,
+        </myAGV_plus/Physics/rl_roller_4_joint>,
+        </myAGV_plus/Physics/rl_roller_5_joint>,
+        </myAGV_plus/Physics/rl_roller_6_joint>,
+        </myAGV_plus/Physics/rl_roller_7_joint>,
+        </myAGV_plus/Physics/rl_roller_8_joint>,
+        </myAGV_plus/Physics/fr_roller_0_joint>,
+        </myAGV_plus/Physics/fr_roller_1_joint>,
+        </myAGV_plus/Physics/fr_roller_2_joint>,
+        </myAGV_plus/Physics/fr_roller_3_joint>,
+        </myAGV_plus/Physics/fr_roller_4_joint>,
+        </myAGV_plus/Physics/fr_roller_5_joint>,
+        </myAGV_plus/Physics/fr_roller_6_joint>,
+        </myAGV_plus/Physics/fr_roller_7_joint>,
+        </myAGV_plus/Physics/fr_roller_8_joint>,
+        </myAGV_plus/Physics/rr_roller_0_joint>,
+        </myAGV_plus/Physics/rr_roller_1_joint>,
+        </myAGV_plus/Physics/rr_roller_2_joint>,
+        </myAGV_plus/Physics/rr_roller_3_joint>,
+        </myAGV_plus/Physics/rr_roller_4_joint>,
+        </myAGV_plus/Physics/rr_roller_5_joint>,
+        </myAGV_plus/Physics/rr_roller_6_joint>,
+        </myAGV_plus/Physics/rr_roller_7_joint>,
+        </myAGV_plus/Physics/rr_roller_8_joint>,
+    ]
+    prepend rel isaac:physics:robotLinks = [
+        </myAGV_plus/Geometry/base_footprint/base_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/laser_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/fl_wheel_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/fl_wheel_link/fl_roller_0_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/fl_wheel_link/fl_roller_1_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/fl_wheel_link/fl_roller_2_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/fl_wheel_link/fl_roller_3_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/fl_wheel_link/fl_roller_4_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/fl_wheel_link/fl_roller_5_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/fl_wheel_link/fl_roller_6_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/fl_wheel_link/fl_roller_7_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/fl_wheel_link/fl_roller_8_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/rl_wheel_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/rl_wheel_link/rl_roller_0_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/rl_wheel_link/rl_roller_1_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/rl_wheel_link/rl_roller_2_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/rl_wheel_link/rl_roller_3_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/rl_wheel_link/rl_roller_4_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/rl_wheel_link/rl_roller_5_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/rl_wheel_link/rl_roller_6_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/rl_wheel_link/rl_roller_7_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/rl_wheel_link/rl_roller_8_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/fr_wheel_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/fr_wheel_link/fr_roller_0_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/fr_wheel_link/fr_roller_1_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/fr_wheel_link/fr_roller_2_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/fr_wheel_link/fr_roller_3_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/fr_wheel_link/fr_roller_4_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/fr_wheel_link/fr_roller_5_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/fr_wheel_link/fr_roller_6_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/fr_wheel_link/fr_roller_7_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/fr_wheel_link/fr_roller_8_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/rr_wheel_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/rr_wheel_link/rr_roller_0_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/rr_wheel_link/rr_roller_1_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/rr_wheel_link/rr_roller_2_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/rr_wheel_link/rr_roller_3_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/rr_wheel_link/rr_roller_4_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/rr_wheel_link/rr_roller_5_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/rr_wheel_link/rr_roller_6_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/rr_wheel_link/rr_roller_7_link>,
+        </myAGV_plus/Geometry/base_footprint/base_link/rr_wheel_link/rr_roller_8_link>,
+    ]
+    token isaac:robotType = "Holonomic"
+
+    over "Geometry"
+    {
+        over "base_footprint"
+        {
+            over "base_link" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                over "laser_link" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                }
+
+                over "fl_wheel_link" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                    over "fl_roller_0_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+
+                    over "fl_roller_1_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+
+                    over "fl_roller_2_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+
+                    over "fl_roller_3_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+
+                    over "fl_roller_4_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+
+                    over "fl_roller_5_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+
+                    over "fl_roller_6_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+
+                    over "fl_roller_7_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+
+                    over "fl_roller_8_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+                }
+
+                over "rl_wheel_link" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                    over "rl_roller_0_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+
+                    over "rl_roller_1_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+
+                    over "rl_roller_2_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+
+                    over "rl_roller_3_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+
+                    over "rl_roller_4_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+
+                    over "rl_roller_5_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+
+                    over "rl_roller_6_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+
+                    over "rl_roller_7_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+
+                    over "rl_roller_8_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+                }
+
+                over "fr_wheel_link" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                    over "fr_roller_0_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+
+                    over "fr_roller_1_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+
+                    over "fr_roller_2_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+
+                    over "fr_roller_3_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+
+                    over "fr_roller_4_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+
+                    over "fr_roller_5_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+
+                    over "fr_roller_6_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+
+                    over "fr_roller_7_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+
+                    over "fr_roller_8_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+                }
+
+                over "rr_wheel_link" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                    over "rr_roller_0_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+
+                    over "rr_roller_1_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+
+                    over "rr_roller_2_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+
+                    over "rr_roller_3_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+
+                    over "rr_roller_4_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+
+                    over "rr_roller_5_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+
+                    over "rr_roller_6_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+
+                    over "rr_roller_7_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+
+                    over "rr_roller_8_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+                }
+
+                over "imu_link" (
+                    prepend apiSchemas = ["IsaacSiteAPI"]
+                )
+                {
+                }
+
+                over "camera_link" (
+                    prepend apiSchemas = ["IsaacSiteAPI"]
+                )
+                {
+                }
+            }
+        }
+    }
+
+    over "Physics"
+    {
+        over "lidar_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "fl_wheel_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "fl_roller_0_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "fl_roller_1_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "fl_roller_2_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "fl_roller_3_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "fl_roller_4_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "fl_roller_5_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "fl_roller_6_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "fl_roller_7_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "fl_roller_8_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "rl_wheel_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "rl_roller_0_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "rl_roller_1_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "rl_roller_2_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "rl_roller_3_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "rl_roller_4_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "rl_roller_5_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "rl_roller_6_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "rl_roller_7_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "rl_roller_8_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "fr_wheel_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "fr_roller_0_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "fr_roller_1_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "fr_roller_2_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "fr_roller_3_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "fr_roller_4_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "fr_roller_5_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "fr_roller_6_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "fr_roller_7_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "fr_roller_8_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "rr_wheel_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "rr_roller_0_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "rr_roller_1_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "rr_roller_2_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "rr_roller_3_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "rr_roller_4_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "rr_roller_5_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "rr_roller_6_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "rr_roller_7_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "rr_roller_8_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+    }
+}
+

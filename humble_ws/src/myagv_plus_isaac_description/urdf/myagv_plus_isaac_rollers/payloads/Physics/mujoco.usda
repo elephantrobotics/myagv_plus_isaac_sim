@@ -1,0 +1,939 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.3"
+    }
+    defaultPrim = "myAGV_plus"
+    doc = """Generated from Composed Stage of root layer /tmp/tmpahb_e02y/myAGV_plus.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_myagv_plus_isaac_rollers_cfhsr0et/usdex_myagv_plus_isaac_rollers/myAGV_plus.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_myagv_plus_isaac_rollers_cfhsr0et/temp_myagv_plus_isaac_rollers/myagv_plus_isaac_rollers.usd
+
+
+Generated from Composed Stage of root layer /home/elephant/humble_ws/src/myagv_plus_description/urdf/myagv_plus_isaac_rollers/payloads/base.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    subLayers = [
+        @./physics.usda@
+    ]
+    upAxis = "Z"
+)
+
+over "myAGV_plus"
+{
+    over "Physics"
+    {
+        def MjcActuator "fl_wheel_joint_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, 0, -0.0010000000474974513, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 1.350000023841858
+            uniform double mjc:forceRange:min = -1.350000023841858
+            uniform double[] mjc:gainPrm = [0.0010000000474974513, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/fl_wheel_joint>
+        }
+
+        def MjcActuator "fl_roller_0_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/fl_roller_0_joint>
+        }
+
+        def MjcActuator "fl_roller_1_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/fl_roller_1_joint>
+        }
+
+        def MjcActuator "fl_roller_2_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/fl_roller_2_joint>
+        }
+
+        def MjcActuator "fl_roller_3_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/fl_roller_3_joint>
+        }
+
+        def MjcActuator "fl_roller_4_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/fl_roller_4_joint>
+        }
+
+        def MjcActuator "fl_roller_5_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/fl_roller_5_joint>
+        }
+
+        def MjcActuator "fl_roller_6_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/fl_roller_6_joint>
+        }
+
+        def MjcActuator "fl_roller_7_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/fl_roller_7_joint>
+        }
+
+        def MjcActuator "fl_roller_8_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/fl_roller_8_joint>
+        }
+
+        def MjcActuator "rl_wheel_joint_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, 0, -0.0010000000474974513, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 1.350000023841858
+            uniform double mjc:forceRange:min = -1.350000023841858
+            uniform double[] mjc:gainPrm = [0.0010000000474974513, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/rl_wheel_joint>
+        }
+
+        def MjcActuator "rl_roller_0_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/rl_roller_0_joint>
+        }
+
+        def MjcActuator "rl_roller_1_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/rl_roller_1_joint>
+        }
+
+        def MjcActuator "rl_roller_2_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/rl_roller_2_joint>
+        }
+
+        def MjcActuator "rl_roller_3_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/rl_roller_3_joint>
+        }
+
+        def MjcActuator "rl_roller_4_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/rl_roller_4_joint>
+        }
+
+        def MjcActuator "rl_roller_5_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/rl_roller_5_joint>
+        }
+
+        def MjcActuator "rl_roller_6_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/rl_roller_6_joint>
+        }
+
+        def MjcActuator "rl_roller_7_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/rl_roller_7_joint>
+        }
+
+        def MjcActuator "rl_roller_8_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/rl_roller_8_joint>
+        }
+
+        def MjcActuator "fr_wheel_joint_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, 0, -0.0010000000474974513, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 1.350000023841858
+            uniform double mjc:forceRange:min = -1.350000023841858
+            uniform double[] mjc:gainPrm = [0.0010000000474974513, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/fr_wheel_joint>
+        }
+
+        def MjcActuator "fr_roller_0_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/fr_roller_0_joint>
+        }
+
+        def MjcActuator "fr_roller_1_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/fr_roller_1_joint>
+        }
+
+        def MjcActuator "fr_roller_2_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/fr_roller_2_joint>
+        }
+
+        def MjcActuator "fr_roller_3_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/fr_roller_3_joint>
+        }
+
+        def MjcActuator "fr_roller_4_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/fr_roller_4_joint>
+        }
+
+        def MjcActuator "fr_roller_5_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/fr_roller_5_joint>
+        }
+
+        def MjcActuator "fr_roller_6_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/fr_roller_6_joint>
+        }
+
+        def MjcActuator "fr_roller_7_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/fr_roller_7_joint>
+        }
+
+        def MjcActuator "fr_roller_8_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/fr_roller_8_joint>
+        }
+
+        def MjcActuator "rr_wheel_joint_actuator"
+        {
+            uniform double[] mjc:biasPrm = [0, 0, -0.0010000000474974513, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:biasType = "affine"
+            uniform double mjc:forceRange:max = 1.350000023841858
+            uniform double mjc:forceRange:min = -1.350000023841858
+            uniform double[] mjc:gainPrm = [0.0010000000474974513, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            uniform token mjc:gainType = "fixed"
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/rr_wheel_joint>
+        }
+
+        def MjcActuator "rr_roller_0_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/rr_roller_0_joint>
+        }
+
+        def MjcActuator "rr_roller_1_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/rr_roller_1_joint>
+        }
+
+        def MjcActuator "rr_roller_2_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/rr_roller_2_joint>
+        }
+
+        def MjcActuator "rr_roller_3_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/rr_roller_3_joint>
+        }
+
+        def MjcActuator "rr_roller_4_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/rr_roller_4_joint>
+        }
+
+        def MjcActuator "rr_roller_5_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/rr_roller_5_joint>
+        }
+
+        def MjcActuator "rr_roller_6_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/rr_roller_6_joint>
+        }
+
+        def MjcActuator "rr_roller_7_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/rr_roller_7_joint>
+        }
+
+        def MjcActuator "rr_roller_8_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = inf
+            uniform double mjc:forceRange:min = -inf
+            custom rel mjc:target
+            prepend rel mjc:target = </myAGV_plus/Physics/rr_roller_8_joint>
+        }
+
+        over "fl_wheel_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+            custom float mjc:frictionloss = 0.001
+        }
+
+        over "rl_wheel_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+            custom float mjc:frictionloss = 0.001
+        }
+
+        over "fr_wheel_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+            custom float mjc:frictionloss = 0.001
+        }
+
+        over "rr_wheel_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+            custom float mjc:frictionloss = 0.001
+        }
+
+        over "lidar_joint"
+        {
+        }
+
+        over "fl_roller_0_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "fl_roller_1_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "fl_roller_2_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "fl_roller_3_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "fl_roller_4_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "fl_roller_5_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "fl_roller_6_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "fl_roller_7_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "fl_roller_8_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "rl_roller_0_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "rl_roller_1_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "rl_roller_2_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "rl_roller_3_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "rl_roller_4_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "rl_roller_5_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "rl_roller_6_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "rl_roller_7_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "rl_roller_8_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "fr_roller_0_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "fr_roller_1_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "fr_roller_2_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "fr_roller_3_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "fr_roller_4_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "fr_roller_5_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "fr_roller_6_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "fr_roller_7_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "fr_roller_8_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "rr_roller_0_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "rr_roller_1_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "rr_roller_2_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "rr_roller_3_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "rr_roller_4_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "rr_roller_5_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "rr_roller_6_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "rr_roller_7_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "rr_roller_8_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+    }
+
+    over "Geometry"
+    {
+        over "base_footprint"
+        {
+            over "base_link"
+            {
+                over "laser_link"
+                {
+                    over "laser_link"
+                    {
+                    }
+
+                    over "laser_link_1"
+                    {
+                    }
+                }
+
+                over "fl_wheel_link"
+                {
+                    over "fl_roller_0_link"
+                    {
+                        over "sphere"
+                        {
+                        }
+                    }
+
+                    over "fl_roller_1_link"
+                    {
+                        over "sphere"
+                        {
+                        }
+                    }
+
+                    over "fl_roller_2_link"
+                    {
+                        over "sphere"
+                        {
+                        }
+                    }
+
+                    over "fl_roller_3_link"
+                    {
+                        over "sphere"
+                        {
+                        }
+                    }
+
+                    over "fl_roller_4_link"
+                    {
+                        over "sphere"
+                        {
+                        }
+                    }
+
+                    over "fl_roller_5_link"
+                    {
+                        over "sphere"
+                        {
+                        }
+                    }
+
+                    over "fl_roller_6_link"
+                    {
+                        over "sphere"
+                        {
+                        }
+                    }
+
+                    over "fl_roller_7_link"
+                    {
+                        over "sphere"
+                        {
+                        }
+                    }
+
+                    over "fl_roller_8_link"
+                    {
+                        over "sphere"
+                        {
+                        }
+                    }
+
+                    over "wheel_fl_link"
+                    {
+                    }
+                }
+
+                over "rl_wheel_link"
+                {
+                    over "rl_roller_0_link"
+                    {
+                        over "sphere"
+                        {
+                        }
+                    }
+
+                    over "rl_roller_1_link"
+                    {
+                        over "sphere"
+                        {
+                        }
+                    }
+
+                    over "rl_roller_2_link"
+                    {
+                        over "sphere"
+                        {
+                        }
+                    }
+
+                    over "rl_roller_3_link"
+                    {
+                        over "sphere"
+                        {
+                        }
+                    }
+
+                    over "rl_roller_4_link"
+                    {
+                        over "sphere"
+                        {
+                        }
+                    }
+
+                    over "rl_roller_5_link"
+                    {
+                        over "sphere"
+                        {
+                        }
+                    }
+
+                    over "rl_roller_6_link"
+                    {
+                        over "sphere"
+                        {
+                        }
+                    }
+
+                    over "rl_roller_7_link"
+                    {
+                        over "sphere"
+                        {
+                        }
+                    }
+
+                    over "rl_roller_8_link"
+                    {
+                        over "sphere"
+                        {
+                        }
+                    }
+
+                    over "wheel_rl_link"
+                    {
+                    }
+                }
+
+                over "fr_wheel_link"
+                {
+                    over "fr_roller_0_link"
+                    {
+                        over "sphere"
+                        {
+                        }
+                    }
+
+                    over "fr_roller_1_link"
+                    {
+                        over "sphere"
+                        {
+                        }
+                    }
+
+                    over "fr_roller_2_link"
+                    {
+                        over "sphere"
+                        {
+                        }
+                    }
+
+                    over "fr_roller_3_link"
+                    {
+                        over "sphere"
+                        {
+                        }
+                    }
+
+                    over "fr_roller_4_link"
+                    {
+                        over "sphere"
+                        {
+                        }
+                    }
+
+                    over "fr_roller_5_link"
+                    {
+                        over "sphere"
+                        {
+                        }
+                    }
+
+                    over "fr_roller_6_link"
+                    {
+                        over "sphere"
+                        {
+                        }
+                    }
+
+                    over "fr_roller_7_link"
+                    {
+                        over "sphere"
+                        {
+                        }
+                    }
+
+                    over "fr_roller_8_link"
+                    {
+                        over "sphere"
+                        {
+                        }
+                    }
+
+                    over "wheel_fr_link"
+                    {
+                    }
+                }
+
+                over "rr_wheel_link"
+                {
+                    over "rr_roller_0_link"
+                    {
+                        over "sphere"
+                        {
+                        }
+                    }
+
+                    over "rr_roller_1_link"
+                    {
+                        over "sphere"
+                        {
+                        }
+                    }
+
+                    over "rr_roller_2_link"
+                    {
+                        over "sphere"
+                        {
+                        }
+                    }
+
+                    over "rr_roller_3_link"
+                    {
+                        over "sphere"
+                        {
+                        }
+                    }
+
+                    over "rr_roller_4_link"
+                    {
+                        over "sphere"
+                        {
+                        }
+                    }
+
+                    over "rr_roller_5_link"
+                    {
+                        over "sphere"
+                        {
+                        }
+                    }
+
+                    over "rr_roller_6_link"
+                    {
+                        over "sphere"
+                        {
+                        }
+                    }
+
+                    over "rr_roller_7_link"
+                    {
+                        over "sphere"
+                        {
+                        }
+                    }
+
+                    over "rr_roller_8_link"
+                    {
+                        over "sphere"
+                        {
+                        }
+                    }
+
+                    over "wheel_rr_link"
+                    {
+                    }
+                }
+
+                over "imu_link"
+                {
+                }
+
+                over "camera_link"
+                {
+                }
+
+                over "base_link"
+                {
+                }
+
+                over "base_link_1"
+                {
+                }
+            }
+        }
+    }
+
+    over "Materials"
+    {
+    }
+
+    over "VisualMaterials"
+    {
+    }
+}
+

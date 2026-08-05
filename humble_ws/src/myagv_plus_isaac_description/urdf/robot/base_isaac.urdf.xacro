@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="base" params="wheel_radius base_ixx:=0.005 base_iyy:=0.005 base_izz:=0.005">
+
+    <link name="base_footprint"/>
+
+    <joint name="base_joint" type="fixed">
+      <parent link="base_footprint"/>
+      <child link="base_link" />
+      <origin xyz="0 0 ${wheel_radius - 0.019524}" rpy="0 0 0"/>
+    </joint>
+
+    <link name="base_link">
+      <visual>
+        <geometry>
+          <mesh filename="package://myagv_plus_description/meshes/base_link.stl"/>
+        </geometry>
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+        <material name="White">
+          <color rgba="1.0 1.0 1.0 1.0" />
+        </material>
+      </visual>
+
+      <collision>
+        <geometry>
+          <mesh filename="package://myagv_plus_description/meshes/base_link.stl"/>
+        </geometry>
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      </collision>
+
+      <inertial>
+        <mass value="5" />
+        <inertia ixx="${base_ixx}" ixy="0.0"     ixz="0.0"
+                                iyy="${base_iyy}" iyz="0.0"
+                                              izz="${base_izz}" />
+        <origin xyz="0.0 0.0 0.025" rpy="0.0 0.0 0.0" />
+      </inertial>
+    </link>
+
+    <link name="laser_link">
+      <visual>
+        <geometry>
+          <mesh filename="package://myagv_plus_description/meshes/laser_link.stl"/>
+        </geometry>
+        <origin xyz="0.0 0.0 -0.0212" rpy="0.0 0.0 0.0" />
+        <material name="White">
+          <color rgba="1.0 1.0 1.0 1.0" />
+        </material>
+      </visual>
+
+      <collision>
+        <geometry>
+          <mesh filename="package://myagv_plus_description/meshes/laser_link.stl"/>
+        </geometry>
+        <origin xyz="0.0 0.0 -0.0212" rpy="0.0 0.0 0.0" />
+      </collision>
+
+      <inertial>
+        <mass value="0.2" />
+        <inertia ixx="0.0001" ixy="0.0"     ixz="0.0"
+                                iyy="0.0001" iyz="0.0"
+                                              izz="0.0001" />
+        <origin xyz="0.0 0.0 -0.0212" rpy="0.0 0.0 0.0" />
+      </inertial>
+    </link>
+
+    <joint name="lidar_joint" type="fixed">
+      <!-- z = 扫描面高度, 不是安装基准面。0.07377 是 X2 安装底面, 落在底盘实心层内,
+         Isaac 的 RTX Lidar 从该点发射会 360 度打在自己车壳上。laser_link 下的
+         mesh origin 反向补 -0.0212 保持外壳视觉位置不变。 -->
+    <origin xyz="0.07471 0 0.094" rpy="0 0 3.14159" />
+      <parent link="base_link" />
+      <child link="laser_link" />
+    </joint>
+
+    <link name="imu_link" />
+
+    <joint name="imu_joint" type="fixed">
+      <origin xyz="0.0 0.0 0.02" rpy="0 0 1.5707" />
+      <parent link="base_link" />
+      <child link="imu_link" />
+    </joint>
+
+    <link name="camera_link" />
+
+    <joint name="camera_joint" type="fixed">
+      <origin xyz="0.15991 0 0.051" rpy="0 0 0" />
+      <parent link="base_link" />
+      <child link="camera_link" />
+    </joint>
+
+  </xacro:macro>
+</robot>

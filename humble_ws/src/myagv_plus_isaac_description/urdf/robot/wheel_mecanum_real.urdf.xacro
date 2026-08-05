@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="mecanum_roller" params="side idx ring_radius roller_radius plane_y phase_deg beta">
+    <xacro:property name="theta" value="${(phase_deg + idx * 40.0) * pi / 180.0}" />
+
+    <joint name="${side}_roller_${idx}_joint" type="continuous">
+      <parent link="${side}_wheel_link" />
+      <child link="${side}_roller_${idx}_link" />
+      <origin xyz="${ring_radius * cos(theta)} ${plane_y} ${ring_radius * sin(theta)}"
+              rpy="${beta} ${-theta} 0.0" />
+      <axis xyz="0.0 0.0 1.0" />
+      <dynamics damping="0.0" friction="0.0" />
+    </joint>
+
+    <link name="${side}_roller_${idx}_link">
+      <collision>
+        <geometry>
+          <sphere radius="${roller_radius}" />
+        </geometry>
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      </collision>
+
+      <inertial>
+        <mass value="0.00517" />
+        <inertia ixx="4.4705e-07" ixy="0.0"        ixz="0.0"
+                                  iyy="4.4705e-07" iyz="0.0"
+                                                   izz="1.5399e-07" />
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      </inertial>
+    </link>
+  </xacro:macro>
+
+  <xacro:macro name="mecanum_wheel" params="side wheel_radius">
+
+    <xacro:property name="wheel_separation_x" value="0.233" />
+    <xacro:property name="wheel_separation_y" value="0.23884" />
+    <xacro:property name="ring_radius" value="0.032" />
+    <xacro:property name="roller_radius" value="0.008" />
+    <xacro:property name="half_hub_width" value="0.018699" />
+    <xacro:property name="hub_com_offset" value="0.017890" />
+
+    <xacro:property name="hub_mass" value="0.0290793" />
+    <xacro:property name="hub_ixx" value="8.77874e-06" />
+    <xacro:property name="hub_iyy" value="1.61024e-05" />
+    <xacro:property name="hub_izz" value="8.70062e-06" />
+
+    <xacro:if value="${side == 'fl'}">
+      <xacro:property name="x" value="${wheel_separation_x/2.0}" />
+      <xacro:property name="y" value="${wheel_separation_y/2.0}" />
+      <xacro:property name="y_sign" value="${-1.0}" />
+      <xacro:property name="mesh" value="package://myagv_plus_description/meshes/wheel_fl_link.stl" />
+      <xacro:property name="phase_deg" value="${39.92}" />
+      <xacro:property name="beta" value="${-3.0*pi/4.0}" />
+    </xacro:if>
+    <xacro:if value="${side == 'fr'}">
+      <xacro:property name="x" value="${wheel_separation_x/2.0}" />
+      <xacro:property name="y" value="${-wheel_separation_y/2.0}" />
+      <xacro:property name="y_sign" value="${1.0}" />
+      <xacro:property name="mesh" value="package://myagv_plus_description/meshes/wheel_fr_link.stl" />
+      <xacro:property name="phase_deg" value="${18.99}" />
+      <xacro:property name="beta" value="${3.0*pi/4.0}" />
+    </xacro:if>
+    <xacro:if value="${side == 'rl'}">
+      <xacro:property name="x" value="${-wheel_separation_x/2.0}" />
+      <xacro:property name="y" value="${wheel_separation_y/2.0}" />
+      <xacro:property name="y_sign" value="${-1.0}" />
+      <xacro:property name="mesh" value="package://myagv_plus_description/meshes/wheel_rl_link.stl" />
+      <xacro:property name="phase_deg" value="${19.11}" />
+      <xacro:property name="beta" value="${3.0*pi/4.0}" />
+    </xacro:if>
+    <xacro:if value="${side == 'rr'}">
+      <xacro:property name="x" value="${-wheel_separation_x/2.0}" />
+      <xacro:property name="y" value="${-wheel_separation_y/2.0}" />
+      <xacro:property name="y_sign" value="${1.0}" />
+      <xacro:property name="mesh" value="package://myagv_plus_description/meshes/wheel_rr_link.stl" />
+      <xacro:property name="phase_deg" value="${9.93}" />
+      <xacro:property name="beta" value="${-3.0*pi/4.0}" />
+    </xacro:if>
+
+    <xacro:property name="plane_y" value="${y_sign * half_hub_width}" />
+
+    <joint name="${side}_wheel_joint" type="continuous">
+      <parent link="base_link" />
+      <child link="${side}_wheel_link" />
+      <origin xyz="${x} ${y} 0.019524" rpy="0.0 0.0 0.0" />
+      <axis xyz="0.0 1.0 0.0" />
+      <limit effort="1.35" velocity="40.0" />
+      <dynamics damping="0.001" friction="0.001" />
+    </joint>
+
+    <link name="${side}_wheel_link">
+      <visual>
+        <geometry>
+          <mesh filename="${mesh}" />
+        </geometry>
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+        <material name="">
+          <color rgba="1 1 1 1" />
+        </material>
+      </visual>
+
+      <inertial>
+        <mass value="${hub_mass}" />
+        <inertia ixx="${hub_ixx}" ixy="0.0"        ixz="0.0"
+                                  iyy="${hub_iyy}" iyz="0.0"
+                                                   izz="${hub_izz}" />
+        <origin xyz="0.0 ${y_sign * hub_com_offset} 0.0" rpy="0.0 0.0 0.0" />
+      </inertial>
+    </link>
+
+    <xacro:mecanum_roller side="${side}" idx="0" ring_radius="${ring_radius}" roller_radius="${roller_radius}" plane_y="${plane_y}" phase_deg="${phase_deg}" beta="${beta}" />
+    <xacro:mecanum_roller side="${side}" idx="1" ring_radius="${ring_radius}" roller_radius="${roller_radius}" plane_y="${plane_y}" phase_deg="${phase_deg}" beta="${beta}" />
+    <xacro:mecanum_roller side="${side}" idx="2" ring_radius="${ring_radius}" roller_radius="${roller_radius}" plane_y="${plane_y}" phase_deg="${phase_deg}" beta="${beta}" />
+    <xacro:mecanum_roller side="${side}" idx="3" ring_radius="${ring_radius}" roller_radius="${roller_radius}" plane_y="${plane_y}" phase_deg="${phase_deg}" beta="${beta}" />
+    <xacro:mecanum_roller side="${side}" idx="4" ring_radius="${ring_radius}" roller_radius="${roller_radius}" plane_y="${plane_y}" phase_deg="${phase_deg}" beta="${beta}" />
+    <xacro:mecanum_roller side="${side}" idx="5" ring_radius="${ring_radius}" roller_radius="${roller_radius}" plane_y="${plane_y}" phase_deg="${phase_deg}" beta="${beta}" />
+    <xacro:mecanum_roller side="${side}" idx="6" ring_radius="${ring_radius}" roller_radius="${roller_radius}" plane_y="${plane_y}" phase_deg="${phase_deg}" beta="${beta}" />
+    <xacro:mecanum_roller side="${side}" idx="7" ring_radius="${ring_radius}" roller_radius="${roller_radius}" plane_y="${plane_y}" phase_deg="${phase_deg}" beta="${beta}" />
+    <xacro:mecanum_roller side="${side}" idx="8" ring_radius="${ring_radius}" roller_radius="${roller_radius}" plane_y="${plane_y}" phase_deg="${phase_deg}" beta="${beta}" />
+
+  </xacro:macro>
+</robot>

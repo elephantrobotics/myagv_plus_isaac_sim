@@ -1,0 +1,1746 @@
+#usda 1.0
+(
+    customLayerData = {
+        dictionary cameraSettings = {
+            dictionary Front = {
+                double3 position = (5, 0, 0)
+                double radius = 5
+            }
+            dictionary Perspective = {
+                double3 position = (0.8326591781351196, 0.03177345900515398, 0.549066911957917)
+                double3 target = (-0.28054025829217566, 0.09726013223512806, -0.1402859283039991)
+            }
+            dictionary Right = {
+                double3 position = (0, -5, 0)
+                double radius = 5
+            }
+            dictionary Top = {
+                double3 position = (0, 0, 5)
+                double radius = 5
+            }
+            string boundCamera = "/OmniverseKit_Persp"
+        }
+        string creator = "URDF USD Converter v0.1.3"
+        dictionary omni_layer = {
+            string authoring_layer = "./myagv_plus_isaac_rollers.usda"
+        }
+        dictionary renderSettings = {
+        }
+    }
+    defaultPrim = "myAGV_plus"
+    doc = """Generated from Composed Stage of root layer /tmp/tmpahb_e02y/myAGV_plus.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_myagv_plus_isaac_rollers_cfhsr0et/usdex_myagv_plus_isaac_rollers/myAGV_plus.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_myagv_plus_isaac_rollers_cfhsr0et/temp_myagv_plus_isaac_rollers/myagv_plus_isaac_rollers.usd
+
+
+Generated from Composed Stage of root layer /home/elephant/humble_ws/src/myagv_plus_description/urdf/myagv_plus_isaac_rollers/payloads/base.usd
+"""
+    endTimeCode = 0
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    startTimeCode = -1
+    upAxis = "Z"
+)
+
+def Xform "myAGV_plus" (
+    prepend references = @./payloads/base.usda@
+    variants = {
+        string Physics = "physx"
+    }
+    append variantSets = "Physics"
+)
+{
+    over "Physics"
+    {
+        over "fl_roller_0_joint" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float drive:angular:physics:damping = 0.00005
+            float drive:angular:physics:maxForce = 0
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float physxJoint:jointFriction = 0
+            float physxJoint:maxJointVelocity = 5730
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "fl_roller_1_joint" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float drive:angular:physics:damping = 0.00005
+            float drive:angular:physics:maxForce = 0
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float physxJoint:jointFriction = 0
+            float physxJoint:maxJointVelocity = 5730
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "fl_roller_2_joint" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float drive:angular:physics:damping = 0.00005
+            float drive:angular:physics:maxForce = 0
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float physxJoint:jointFriction = 0
+            float physxJoint:maxJointVelocity = 5730
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "fl_roller_3_joint" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float drive:angular:physics:damping = 0.00005
+            float drive:angular:physics:maxForce = 0
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float physxJoint:jointFriction = 0
+            float physxJoint:maxJointVelocity = 5730
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "fl_roller_4_joint" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float drive:angular:physics:damping = 0.00005
+            float drive:angular:physics:maxForce = 0
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float physxJoint:jointFriction = 0
+            float physxJoint:maxJointVelocity = 5730
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "fl_roller_5_joint" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float drive:angular:physics:damping = 0.00005
+            float drive:angular:physics:maxForce = 0
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float physxJoint:jointFriction = 0
+            float physxJoint:maxJointVelocity = 5730
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "fl_roller_6_joint" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float drive:angular:physics:damping = 0.00005
+            float drive:angular:physics:maxForce = 0
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float physxJoint:jointFriction = 0
+            float physxJoint:maxJointVelocity = 5730
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "fl_roller_7_joint" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float drive:angular:physics:damping = 0.00005
+            float drive:angular:physics:maxForce = 0
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float physxJoint:jointFriction = 0
+            float physxJoint:maxJointVelocity = 5730
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "fl_roller_8_joint" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float drive:angular:physics:damping = 0.00005
+            float drive:angular:physics:maxForce = 0
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float physxJoint:jointFriction = 0
+            float physxJoint:maxJointVelocity = 5730
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "rl_roller_0_joint" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float drive:angular:physics:damping = 0.00005
+            float drive:angular:physics:maxForce = 0
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float physxJoint:jointFriction = 0
+            float physxJoint:maxJointVelocity = 5730
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "rl_roller_1_joint" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float drive:angular:physics:damping = 0.00005
+            float drive:angular:physics:maxForce = 0
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float physxJoint:jointFriction = 0
+            float physxJoint:maxJointVelocity = 5730
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "rl_roller_2_joint" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float drive:angular:physics:damping = 0.00005
+            float drive:angular:physics:maxForce = 0
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float physxJoint:jointFriction = 0
+            float physxJoint:maxJointVelocity = 5730
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "rl_roller_3_joint" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float drive:angular:physics:damping = 0.00005
+            float drive:angular:physics:maxForce = 0
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float physxJoint:jointFriction = 0
+            float physxJoint:maxJointVelocity = 5730
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "rl_roller_4_joint" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float drive:angular:physics:damping = 0.00005
+            float drive:angular:physics:maxForce = 0
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float physxJoint:jointFriction = 0
+            float physxJoint:maxJointVelocity = 5730
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "rl_roller_5_joint" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float drive:angular:physics:damping = 0.00005
+            float drive:angular:physics:maxForce = 0
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float physxJoint:jointFriction = 0
+            float physxJoint:maxJointVelocity = 5730
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "rl_roller_6_joint" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float drive:angular:physics:damping = 0.00005
+            float drive:angular:physics:maxForce = 0
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float physxJoint:jointFriction = 0
+            float physxJoint:maxJointVelocity = 5730
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "rl_roller_7_joint" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float drive:angular:physics:damping = 0.00005
+            float drive:angular:physics:maxForce = 0
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float physxJoint:jointFriction = 0
+            float physxJoint:maxJointVelocity = 5730
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "rl_roller_8_joint" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float drive:angular:physics:damping = 0.00005
+            float drive:angular:physics:maxForce = 0
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float physxJoint:jointFriction = 0
+            float physxJoint:maxJointVelocity = 5730
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "fr_roller_0_joint" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float drive:angular:physics:damping = 0.00005
+            float drive:angular:physics:maxForce = 0
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float physxJoint:jointFriction = 0
+            float physxJoint:maxJointVelocity = 5730
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "fr_roller_1_joint" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float drive:angular:physics:damping = 0.00005
+            float drive:angular:physics:maxForce = 0
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float physxJoint:jointFriction = 0
+            float physxJoint:maxJointVelocity = 5730
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "fr_roller_2_joint" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float drive:angular:physics:damping = 0.00005
+            float drive:angular:physics:maxForce = 0
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float physxJoint:jointFriction = 0
+            float physxJoint:maxJointVelocity = 5730
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "fr_roller_3_joint" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float drive:angular:physics:damping = 0.00005
+            float drive:angular:physics:maxForce = 0
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float physxJoint:jointFriction = 0
+            float physxJoint:maxJointVelocity = 5730
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "fr_roller_4_joint" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float drive:angular:physics:damping = 0.00005
+            float drive:angular:physics:maxForce = 0
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float physxJoint:jointFriction = 0
+            float physxJoint:maxJointVelocity = 5730
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "fr_roller_5_joint" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float drive:angular:physics:damping = 0.00005
+            float drive:angular:physics:maxForce = 0
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float physxJoint:jointFriction = 0
+            float physxJoint:maxJointVelocity = 5730
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "fr_roller_6_joint" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float drive:angular:physics:damping = 0.00005
+            float drive:angular:physics:maxForce = 0
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float physxJoint:jointFriction = 0
+            float physxJoint:maxJointVelocity = 5730
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "fr_roller_7_joint" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float drive:angular:physics:damping = 0.00005
+            float drive:angular:physics:maxForce = 0
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float physxJoint:jointFriction = 0
+            float physxJoint:maxJointVelocity = 5730
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "fr_roller_8_joint" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float drive:angular:physics:damping = 0.00005
+            float drive:angular:physics:maxForce = 0
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float physxJoint:jointFriction = 0
+            float physxJoint:maxJointVelocity = 5730
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "rr_roller_0_joint" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float drive:angular:physics:damping = 0.00005
+            float drive:angular:physics:maxForce = 0
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float physxJoint:jointFriction = 0
+            float physxJoint:maxJointVelocity = 5730
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "rr_roller_1_joint" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float drive:angular:physics:damping = 0.00005
+            float drive:angular:physics:maxForce = 0
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float physxJoint:jointFriction = 0
+            float physxJoint:maxJointVelocity = 5730
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "rr_roller_2_joint" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float drive:angular:physics:damping = 0.00005
+            float drive:angular:physics:maxForce = 0
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float physxJoint:jointFriction = 0
+            float physxJoint:maxJointVelocity = 5730
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "rr_roller_3_joint" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float drive:angular:physics:damping = 0.00005
+            float drive:angular:physics:maxForce = 0
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float physxJoint:jointFriction = 0
+            float physxJoint:maxJointVelocity = 5730
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "rr_roller_4_joint" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float drive:angular:physics:damping = 0.00005
+            float drive:angular:physics:maxForce = 0
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float physxJoint:jointFriction = 0
+            float physxJoint:maxJointVelocity = 5730
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "rr_roller_5_joint" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float drive:angular:physics:damping = 0.00005
+            float drive:angular:physics:maxForce = 0
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float physxJoint:jointFriction = 0
+            float physxJoint:maxJointVelocity = 5730
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "rr_roller_6_joint" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float drive:angular:physics:damping = 0.00005
+            float drive:angular:physics:maxForce = 0
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float physxJoint:jointFriction = 0
+            float physxJoint:maxJointVelocity = 5730
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "rr_roller_7_joint" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float drive:angular:physics:damping = 0.00005
+            float drive:angular:physics:maxForce = 0
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float physxJoint:jointFriction = 0
+            float physxJoint:maxJointVelocity = 5730
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "rr_roller_8_joint" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float drive:angular:physics:damping = 0.00005
+            float drive:angular:physics:maxForce = 0
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float physxJoint:jointFriction = 0
+            float physxJoint:maxJointVelocity = 5730
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "fl_wheel_joint"
+        {
+            float isaacmecanumwheel:angle = -135.0
+            float isaacmecanumwheel:radius = 0.04
+            float drive:angular:physics:damping = 0.8
+            float drive:angular:physics:maxForce = 1.35
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "rl_wheel_joint"
+        {
+            float isaacmecanumwheel:angle = -45.0
+            float isaacmecanumwheel:radius = 0.04
+            float drive:angular:physics:damping = 0.8
+            float drive:angular:physics:maxForce = 1.35
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "fr_wheel_joint"
+        {
+            float isaacmecanumwheel:angle = -45.0
+            float isaacmecanumwheel:radius = 0.04
+            float drive:angular:physics:damping = 0.8
+            float drive:angular:physics:maxForce = 1.35
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "rr_wheel_joint"
+        {
+            float isaacmecanumwheel:angle = -135.0
+            float isaacmecanumwheel:radius = 0.04
+            float drive:angular:physics:damping = 0.8
+            float drive:angular:physics:maxForce = 1.35
+            float drive:angular:physics:stiffness = 0
+            float drive:angular:physics:targetVelocity = 0
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+    }
+
+    over "Geometry"
+    {
+        over "base_footprint"
+        {
+            over "base_link"
+            {
+                def Xform "com_offset"
+                {
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate"]
+                }
+
+                over "fl_wheel_link"
+                {
+                    over "fl_roller_0_link" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </PhysicsMaterial_rubber> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        over "sphere" (
+                            prepend apiSchemas = ["PhysxCollisionAPI"]
+                        )
+                        {
+                            float physxCollision:contactOffset = 0.002
+                            float physxCollision:restOffset = 0
+                        }
+                    }
+
+                    over "fl_roller_1_link" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </PhysicsMaterial_rubber> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        over "sphere" (
+                            prepend apiSchemas = ["PhysxCollisionAPI"]
+                        )
+                        {
+                            float physxCollision:contactOffset = 0.002
+                            float physxCollision:restOffset = 0
+                        }
+                    }
+
+                    over "fl_roller_2_link" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </PhysicsMaterial_rubber> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        over "sphere" (
+                            prepend apiSchemas = ["PhysxCollisionAPI"]
+                        )
+                        {
+                            float physxCollision:contactOffset = 0.002
+                            float physxCollision:restOffset = 0
+                        }
+                    }
+
+                    over "fl_roller_3_link" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </PhysicsMaterial_rubber> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        over "sphere" (
+                            prepend apiSchemas = ["PhysxCollisionAPI"]
+                        )
+                        {
+                            float physxCollision:contactOffset = 0.002
+                            float physxCollision:restOffset = 0
+                        }
+                    }
+
+                    over "fl_roller_4_link" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </PhysicsMaterial_rubber> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        over "sphere" (
+                            prepend apiSchemas = ["PhysxCollisionAPI"]
+                        )
+                        {
+                            float physxCollision:contactOffset = 0.002
+                            float physxCollision:restOffset = 0
+                        }
+                    }
+
+                    over "fl_roller_5_link" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </PhysicsMaterial_rubber> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        over "sphere" (
+                            prepend apiSchemas = ["PhysxCollisionAPI"]
+                        )
+                        {
+                            float physxCollision:contactOffset = 0.002
+                            float physxCollision:restOffset = 0
+                        }
+                    }
+
+                    over "fl_roller_6_link" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </PhysicsMaterial_rubber> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        over "sphere" (
+                            prepend apiSchemas = ["PhysxCollisionAPI"]
+                        )
+                        {
+                            float physxCollision:contactOffset = 0.002
+                            float physxCollision:restOffset = 0
+                        }
+                    }
+
+                    over "fl_roller_7_link" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </PhysicsMaterial_rubber> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        over "sphere" (
+                            prepend apiSchemas = ["PhysxCollisionAPI"]
+                        )
+                        {
+                            float physxCollision:contactOffset = 0.002
+                            float physxCollision:restOffset = 0
+                        }
+                    }
+
+                    over "fl_roller_8_link" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </PhysicsMaterial_rubber> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        over "sphere" (
+                            prepend apiSchemas = ["PhysxCollisionAPI"]
+                        )
+                        {
+                            float physxCollision:contactOffset = 0.002
+                            float physxCollision:restOffset = 0
+                        }
+                    }
+                }
+
+                over "rl_wheel_link"
+                {
+                    over "rl_roller_0_link" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </PhysicsMaterial_rubber> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        over "sphere" (
+                            prepend apiSchemas = ["PhysxCollisionAPI"]
+                        )
+                        {
+                            float physxCollision:contactOffset = 0.002
+                            float physxCollision:restOffset = 0
+                        }
+                    }
+
+                    over "rl_roller_1_link" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </PhysicsMaterial_rubber> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        over "sphere" (
+                            prepend apiSchemas = ["PhysxCollisionAPI"]
+                        )
+                        {
+                            float physxCollision:contactOffset = 0.002
+                            float physxCollision:restOffset = 0
+                        }
+                    }
+
+                    over "rl_roller_2_link" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </PhysicsMaterial_rubber> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        over "sphere" (
+                            prepend apiSchemas = ["PhysxCollisionAPI"]
+                        )
+                        {
+                            float physxCollision:contactOffset = 0.002
+                            float physxCollision:restOffset = 0
+                        }
+                    }
+
+                    over "rl_roller_3_link" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </PhysicsMaterial_rubber> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        over "sphere" (
+                            prepend apiSchemas = ["PhysxCollisionAPI"]
+                        )
+                        {
+                            float physxCollision:contactOffset = 0.002
+                            float physxCollision:restOffset = 0
+                        }
+                    }
+
+                    over "rl_roller_4_link" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </PhysicsMaterial_rubber> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        over "sphere" (
+                            prepend apiSchemas = ["PhysxCollisionAPI"]
+                        )
+                        {
+                            float physxCollision:contactOffset = 0.002
+                            float physxCollision:restOffset = 0
+                        }
+                    }
+
+                    over "rl_roller_5_link" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </PhysicsMaterial_rubber> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        over "sphere" (
+                            prepend apiSchemas = ["PhysxCollisionAPI"]
+                        )
+                        {
+                            float physxCollision:contactOffset = 0.002
+                            float physxCollision:restOffset = 0
+                        }
+                    }
+
+                    over "rl_roller_6_link" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </PhysicsMaterial_rubber> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        over "sphere" (
+                            prepend apiSchemas = ["PhysxCollisionAPI"]
+                        )
+                        {
+                            float physxCollision:contactOffset = 0.002
+                            float physxCollision:restOffset = 0
+                        }
+                    }
+
+                    over "rl_roller_7_link" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </PhysicsMaterial_rubber> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        over "sphere" (
+                            prepend apiSchemas = ["PhysxCollisionAPI"]
+                        )
+                        {
+                            float physxCollision:contactOffset = 0.002
+                            float physxCollision:restOffset = 0
+                        }
+                    }
+
+                    over "rl_roller_8_link" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </PhysicsMaterial_rubber> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        over "sphere" (
+                            prepend apiSchemas = ["PhysxCollisionAPI"]
+                        )
+                        {
+                            float physxCollision:contactOffset = 0.002
+                            float physxCollision:restOffset = 0
+                        }
+                    }
+                }
+
+                over "fr_wheel_link"
+                {
+                    over "fr_roller_0_link" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </PhysicsMaterial_rubber> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        over "sphere" (
+                            prepend apiSchemas = ["PhysxCollisionAPI"]
+                        )
+                        {
+                            float physxCollision:contactOffset = 0.002
+                            float physxCollision:restOffset = 0
+                        }
+                    }
+
+                    over "fr_roller_1_link" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </PhysicsMaterial_rubber> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        over "sphere" (
+                            prepend apiSchemas = ["PhysxCollisionAPI"]
+                        )
+                        {
+                            float physxCollision:contactOffset = 0.002
+                            float physxCollision:restOffset = 0
+                        }
+                    }
+
+                    over "fr_roller_2_link" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </PhysicsMaterial_rubber> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        over "sphere" (
+                            prepend apiSchemas = ["PhysxCollisionAPI"]
+                        )
+                        {
+                            float physxCollision:contactOffset = 0.002
+                            float physxCollision:restOffset = 0
+                        }
+                    }
+
+                    over "fr_roller_3_link" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </PhysicsMaterial_rubber> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        over "sphere" (
+                            prepend apiSchemas = ["PhysxCollisionAPI"]
+                        )
+                        {
+                            float physxCollision:contactOffset = 0.002
+                            float physxCollision:restOffset = 0
+                        }
+                    }
+
+                    over "fr_roller_4_link" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </PhysicsMaterial_rubber> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        over "sphere" (
+                            prepend apiSchemas = ["PhysxCollisionAPI"]
+                        )
+                        {
+                            float physxCollision:contactOffset = 0.002
+                            float physxCollision:restOffset = 0
+                        }
+                    }
+
+                    over "fr_roller_5_link" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </PhysicsMaterial_rubber> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        over "sphere" (
+                            prepend apiSchemas = ["PhysxCollisionAPI"]
+                        )
+                        {
+                            float physxCollision:contactOffset = 0.002
+                            float physxCollision:restOffset = 0
+                        }
+                    }
+
+                    over "fr_roller_6_link" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </PhysicsMaterial_rubber> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        over "sphere" (
+                            prepend apiSchemas = ["PhysxCollisionAPI"]
+                        )
+                        {
+                            float physxCollision:contactOffset = 0.002
+                            float physxCollision:restOffset = 0
+                        }
+                    }
+
+                    over "fr_roller_7_link" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </PhysicsMaterial_rubber> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        over "sphere" (
+                            prepend apiSchemas = ["PhysxCollisionAPI"]
+                        )
+                        {
+                            float physxCollision:contactOffset = 0.002
+                            float physxCollision:restOffset = 0
+                        }
+                    }
+
+                    over "fr_roller_8_link" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </PhysicsMaterial_rubber> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        over "sphere" (
+                            prepend apiSchemas = ["PhysxCollisionAPI"]
+                        )
+                        {
+                            float physxCollision:contactOffset = 0.002
+                            float physxCollision:restOffset = 0
+                        }
+                    }
+                }
+
+                over "rr_wheel_link"
+                {
+                    over "rr_roller_0_link" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </PhysicsMaterial_rubber> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        over "sphere" (
+                            prepend apiSchemas = ["PhysxCollisionAPI"]
+                        )
+                        {
+                            float physxCollision:contactOffset = 0.002
+                            float physxCollision:restOffset = 0
+                        }
+                    }
+
+                    over "rr_roller_1_link" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </PhysicsMaterial_rubber> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        over "sphere" (
+                            prepend apiSchemas = ["PhysxCollisionAPI"]
+                        )
+                        {
+                            float physxCollision:contactOffset = 0.002
+                            float physxCollision:restOffset = 0
+                        }
+                    }
+
+                    over "rr_roller_2_link" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </PhysicsMaterial_rubber> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        over "sphere" (
+                            prepend apiSchemas = ["PhysxCollisionAPI"]
+                        )
+                        {
+                            float physxCollision:contactOffset = 0.002
+                            float physxCollision:restOffset = 0
+                        }
+                    }
+
+                    over "rr_roller_3_link" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </PhysicsMaterial_rubber> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        over "sphere" (
+                            prepend apiSchemas = ["PhysxCollisionAPI"]
+                        )
+                        {
+                            float physxCollision:contactOffset = 0.002
+                            float physxCollision:restOffset = 0
+                        }
+                    }
+
+                    over "rr_roller_4_link" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </PhysicsMaterial_rubber> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        over "sphere" (
+                            prepend apiSchemas = ["PhysxCollisionAPI"]
+                        )
+                        {
+                            float physxCollision:contactOffset = 0.002
+                            float physxCollision:restOffset = 0
+                        }
+                    }
+
+                    over "rr_roller_5_link" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </PhysicsMaterial_rubber> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        over "sphere" (
+                            prepend apiSchemas = ["PhysxCollisionAPI"]
+                        )
+                        {
+                            float physxCollision:contactOffset = 0.002
+                            float physxCollision:restOffset = 0
+                        }
+                    }
+
+                    over "rr_roller_6_link" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </PhysicsMaterial_rubber> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        over "sphere" (
+                            prepend apiSchemas = ["PhysxCollisionAPI"]
+                        )
+                        {
+                            float physxCollision:contactOffset = 0.002
+                            float physxCollision:restOffset = 0
+                        }
+                    }
+
+                    over "rr_roller_7_link" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </PhysicsMaterial_rubber> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        over "sphere" (
+                            prepend apiSchemas = ["PhysxCollisionAPI"]
+                        )
+                        {
+                            float physxCollision:contactOffset = 0.002
+                            float physxCollision:restOffset = 0
+                        }
+                    }
+
+                    over "rr_roller_8_link" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding:physics = </PhysicsMaterial_rubber> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+
+                        over "sphere" (
+                            prepend apiSchemas = ["PhysxCollisionAPI"]
+                        )
+                        {
+                            float physxCollision:contactOffset = 0.002
+                            float physxCollision:restOffset = 0
+                        }
+                    }
+                }
+
+                over "laser_link"
+                {
+                }
+            }
+        }
+    }
+    variantSet "Physics" = {
+        "mujoco" (
+            prepend payload = @./payloads/Physics/mujoco.usda@
+        ) {
+
+        }
+        "none" {
+
+        }
+        "physics" (
+            prepend payload = @./payloads/Physics/physics.usda@
+        ) {
+
+        }
+        "physx" (
+            prepend payload = @./payloads/Physics/physx.usda@
+        ) {
+
+        }
+    }
+}
+
+def "Render" (
+    hide_in_stage_window = true
+    no_delete = true
+)
+{
+    def "OmniverseKit"
+    {
+        def "HydraTextures" (
+            hide_in_stage_window = true
+            no_delete = true
+        )
+        {
+            def RenderProduct "omni_kit_widget_viewport_ViewportTexture_0" (
+                prepend apiSchemas = ["OmniRtxSettingsCommonAdvancedAPI_1", "OmniRtxSettingsRtAdvancedAPI_1", "OmniRtxSettingsPtAdvancedAPI_1", "OmniRtxPostColorGradingAPI_1", "OmniRtxPostChromaticAberrationAPI_1", "OmniRtxPostBloomPhysicalAPI_1", "OmniRtxPostMatteObjectAPI_1", "OmniRtxPostCompositingAPI_1", "OmniRtxPostDofAPI_1", "OmniRtxPostMotionBlurAPI_1", "OmniRtxPostTvNoiseAPI_1", "OmniRtxPostTonemapIrayReinhardAPI_1", "OmniRtxPostDebugSettingsAPI_1", "OmniRtxDebugSettingsAPI_1"]
+                hide_in_stage_window = true
+                no_delete = true
+            )
+            {
+                rel camera = </OmniverseKit_Persp>
+                token omni:rtx:ambientOcclusion:denoiserMode = "none"
+                token omni:rtx:background:source:texture:textureMode = "repeatMirrored"
+                token omni:rtx:background:source:type = "domeLight"
+                bool omni:rtx:debug:view:pixelDebug:enableFixedTextPos = 1
+                token omni:rtx:directLighting:sampledLighting:denoisingTechnique = "None"
+                bool omni:rtx:dlss:frameGeneration = 0
+                float3 omni:rtx:domeLight:rotationAxis = (0, 0, 1)
+                bool omni:rtx:indirectDiffuse:denoiser:enabled = 0
+                bool omni:rtx:material:db:syncLoads = 1
+                token omni:rtx:post:dlss:execMode = "performance"
+                bool omni:rtx:post:registeredCompositing:invertColorCorrection = 1
+                bool omni:rtx:post:registeredCompositing:invertToneMap = 1
+                bool omni:rtx:pt:adaptiveSampling:filterError = 0
+                uint omni:rtx:pt:adaptiveSampling:fixedSppIterations = 2
+                uint omni:rtx:pt:maxSamplesPerLaunch = 2073600
+                uint omni:rtx:pt:mgpu:maxPixelsPerRegionExponent = 12
+                bool omni:rtx:reflections:denoiser:enabled = 0
+                token omni:rtx:rendermode = "RealTimePathTracing"
+                color3f omni:rtx:rt:ambientLight:color = (0.1, 0.1, 0.1)
+                bool omni:rtx:rt:demoire = 0
+                bool omni:rtx:rt:ecoMode:enabled
+                bool omni:rtx:rt:lightcache:spatialCache:dontResolveConflicts = 1
+                int omni:rtx:rt:sss:samples = 1
+                uint omni:rtx:rtpt:maxVolumeBounces = 15
+                float omni:rtx:rtpt:modulatingRoughnessThreshold = 0.08
+                bool omni:rtx:scene:hydra:materialSyncLoads = 1
+                bool omni:rtx:scene:hydra:mdlMaterialWarmup = 1
+                rel orderedVars = </Render/Vars/LdrColor>
+                custom bool overrideClipRange = 0
+                uniform int2 resolution = (1280, 720)
+            }
+        }
+    }
+
+    def RenderSettings "OmniverseGlobalRenderSettings" (
+        prepend apiSchemas = ["OmniRtxSettingsGlobalRtAdvancedAPI_1", "OmniRtxSettingsGlobalPtAdvancedAPI_1"]
+        no_delete = true
+    )
+    {
+        rel products = </Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0>
+    }
+
+    def "Vars"
+    {
+        def RenderVar "LdrColor" (
+            hide_in_stage_window = true
+            no_delete = true
+        )
+        {
+            uniform string sourceName = "LdrColor"
+            uniform token sourceType = "raw"
+        }
+    }
+}
+
+over "OmniverseKit_Persp" (
+    prepend apiSchemas = ["OmniRtxCameraAutoExposureAPI_1", "OmniRtxCameraExposureAPI_1"]
+    customData = {
+        dictionary omni = {
+            dictionary kit = {
+                bool hide_in_stage_window = 1
+                bool no_delete = 1
+            }
+        }
+    }
+    hide_in_stage_window = true
+    kind = "component"
+    no_delete = true
+)
+{
+    float2 clippingRange = (0.01, 10000000)
+    float exposure:fStop = 5
+    float exposure:responsivity = 1.1026709
+    float exposure:time = 0.02
+    float focalLength = 18.147562
+    float focusDistance = 400
+    custom uniform vector3d omni:kit:centerOfInterest = (0, 0, -1.3109953577377562)
+    float3 xformOp:rotateXYZ = (58.276268, -3.180555e-14, 86.633316)
+    float3 xformOp:scale = (1, 1, 1)
+    double3 xformOp:translate = (0.8326591781351196, 0.03177345900515398, 0.549066911957917)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+}
+
+def DomeLight "DomeLight" (
+    prepend apiSchemas = ["ShapingAPI"]
+)
+{
+    float inputs:intensity = 1000
+    float inputs:shaping:cone:angle = 180
+    float inputs:shaping:cone:softness
+    float inputs:shaping:focus
+    color3f inputs:shaping:focusTint
+    asset inputs:shaping:ies:file
+    token inputs:texture:format = "latlong"
+    custom int omni:rtx:usdluxVersion = 2505
+    quatd xformOp:orient = (0.4999999999999999, 0.5, -0.5000000000000001, -0.5)
+    double3 xformOp:scale = (1, 1, 1)
+    double3 xformOp:translate = (0, 0, 0)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+}
+
+def PhysicsScene "PhysicsScene" (
+    prepend apiSchemas = ["NewtonSceneAPI", "PhysxSceneAPI"]
+)
+{
+    uint physxScene:timeStepsPerSecond = 60
+}
+
+def Xform "GroundPlane" (
+    prepend apiSchemas = ["MaterialBindingAPI"]
+)
+{
+    rel material:binding:physics = </PhysicsMaterial_rubber> (
+        bindMaterialAs = "weakerThanDescendants"
+    )
+    quatf xformOp:orient = (1, 0, 0, 0)
+    float3 xformOp:scale = (1, 1, 1)
+    double3 xformOp:translate = (0, 0, 0)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+    def Mesh "CollisionMesh"
+    {
+        uniform bool doubleSided = 0
+        int[] faceVertexCounts = [4]
+        int[] faceVertexIndices = [0, 1, 2, 3]
+        normal3f[] normals = [(0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1)]
+        point3f[] points = [(-25, -25, 0), (25, -25, 0), (25, 25, 0), (-25, 25, 0)]
+        color3f[] primvars:displayColor = [(0.5, 0.5, 0.5)]
+        texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+            interpolation = "varying"
+        )
+    }
+
+    def Plane "CollisionPlane" (
+        prepend apiSchemas = ["PhysicsCollisionAPI"]
+    )
+    {
+        uniform token axis = "Z"
+        uniform token purpose = "guide"
+    }
+}
+
+over "OmniverseKit_Front" (
+    customData = {
+        dictionary omni = {
+            dictionary kit = {
+                bool hide_in_stage_window = 1
+                bool no_delete = 1
+            }
+        }
+    }
+    hide_in_stage_window = true
+    kind = "component"
+    no_delete = true
+)
+{
+    float2 clippingRange = (1, 10000000)
+    float horizontalAperture = 50
+    custom uniform vector3d omni:kit:centerOfInterest = (0, 0, -5)
+    token projection = "orthographic"
+    float verticalAperture = 50
+    float3 xformOp:rotateXYZ = (90, -1.2722219e-14, 90)
+    float3 xformOp:scale = (1, 1, 1)
+    double3 xformOp:translate = (5, 0, 0)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+}
+
+over "OmniverseKit_Right" (
+    customData = {
+        dictionary omni = {
+            dictionary kit = {
+                bool hide_in_stage_window = 1
+                bool no_delete = 1
+            }
+        }
+    }
+    hide_in_stage_window = true
+    kind = "component"
+    no_delete = true
+)
+{
+    float2 clippingRange = (1, 10000000)
+    float horizontalAperture = 50
+    custom uniform vector3d omni:kit:centerOfInterest = (0, 0, -5)
+    token projection = "orthographic"
+    float verticalAperture = 50
+    float3 xformOp:rotateXYZ = (90, -1.41245e-30, 1.2722219e-14)
+    float3 xformOp:scale = (1, 1, 1)
+    double3 xformOp:translate = (0, -5, 0)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+}
+
+over "OmniverseKit_Top" (
+    customData = {
+        dictionary omni = {
+            dictionary kit = {
+                bool hide_in_stage_window = 1
+                bool no_delete = 1
+            }
+        }
+    }
+    hide_in_stage_window = true
+    kind = "component"
+    no_delete = true
+)
+{
+    float2 clippingRange = (1, 10000000)
+    float horizontalAperture = 50
+    custom uniform vector3d omni:kit:centerOfInterest = (0, 0, -5)
+    token projection = "orthographic"
+    float verticalAperture = 50
+    float3 xformOp:rotateXYZ = (-1.2722219e-14, -7.016709e-15, -90)
+    float3 xformOp:scale = (1, 1, 1)
+    double3 xformOp:translate = (0, 0, 5)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+}
+
+def Material "PhysicsMaterial_rubber" (
+    prepend apiSchemas = ["PhysicsMaterialAPI", "PhysxMaterialAPI"]
+)
+{
+    float physics:dynamicFriction = 0.8
+    float physics:restitution = 0
+    float physics:staticFriction = 0.9
+    uniform token physxMaterial:frictionCombineMode = "max"
+}
+
+def "Graph"
+{
+    def OmniGraph "ROS_Control"
+    {
+        token evaluationMode = "Automatic"
+        token evaluator:type = "execution"
+        token fabricCacheBacking = "Shared"
+        int2 fileFormatVersion = (1, 9)
+        token pipelineStage = "pipelineStageSimulation"
+
+        def OmniGraphNode "on_playback_tick" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            token node:type = "omni.graph.action.OnPlaybackTick"
+            int node:typeVersion = 2
+            custom double outputs:deltaSeconds
+            custom double outputs:frame
+            custom uint outputs:tick (
+                customData = {
+                    bool isExecution = 1
+                }
+            )
+            custom double outputs:time
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (25.752453, 16.817736)
+        }
+
+        def OmniGraphNode "usd_setup_holonomic_robot" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom rel inputs:comPrim = None (
+                customData = {
+                    dictionary omni = {
+                        dictionary graph = {
+                            string relType = "target"
+                        }
+                    }
+                }
+            )
+            custom token inputs:comPrimPath = "/myAGV_plus/Geometry/base_footprint/base_link/com_offset"
+            custom rel inputs:robotPrim = None (
+                customData = {
+                    dictionary omni = {
+                        dictionary graph = {
+                            string relType = "target"
+                        }
+                    }
+                }
+            )
+            custom token inputs:robotPrimPath = "/myAGV_plus"
+            custom bool inputs:usePath = 1
+            token node:type = "isaacsim.robot.wheeled_robots.HolonomicRobotUsdSetup"
+            int node:typeVersion = 1
+            custom double[] outputs:mecanumAngles
+            custom double3 outputs:upAxis
+            custom double3 outputs:wheelAxis
+            custom token[] outputs:wheelDofNames
+            custom double4[] outputs:wheelOrientations
+            custom double3[] outputs:wheelPositions
+            custom double[] outputs:wheelRadius
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (-241.01697, 250.99716)
+        }
+
+        def OmniGraphNode "holonomic_controller" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom double inputs:angularGain = -0.1497
+            custom uint inputs:execIn (
+                customData = {
+                    bool isExecution = 1
+                }
+            )
+            prepend uint inputs:execIn.connect = </Graph/ROS_Control/on_playback_tick.outputs:tick>
+            custom double3 inputs:inputVelocity
+            prepend double3 inputs:inputVelocity.connect = </Graph/ROS_Control/make_3_vector.outputs:tuple>
+            custom double inputs:linearGain = 2.8284
+            custom double inputs:maxAngularSpeed
+            custom double inputs:maxLinearSpeed
+            custom double inputs:maxWheelSpeed
+            custom double[] inputs:mecanumAngles
+            prepend double[] inputs:mecanumAngles.connect = </Graph/ROS_Control/usd_setup_holonomic_robot.outputs:mecanumAngles>
+            custom double3 inputs:upAxis
+            prepend double3 inputs:upAxis.connect = </Graph/ROS_Control/usd_setup_holonomic_robot.outputs:upAxis>
+            custom double3 inputs:wheelAxis
+            prepend double3 inputs:wheelAxis.connect = </Graph/ROS_Control/usd_setup_holonomic_robot.outputs:wheelAxis>
+            custom double4[] inputs:wheelOrientations
+            prepend double4[] inputs:wheelOrientations.connect = </Graph/ROS_Control/usd_setup_holonomic_robot.outputs:wheelOrientations>
+            custom double3[] inputs:wheelPositions
+            prepend double3[] inputs:wheelPositions.connect = </Graph/ROS_Control/usd_setup_holonomic_robot.outputs:wheelPositions>
+            custom double[] inputs:wheelRadius
+            prepend double[] inputs:wheelRadius.connect = </Graph/ROS_Control/usd_setup_holonomic_robot.outputs:wheelRadius>
+            token node:type = "isaacsim.robot.wheeled_robots.HolonomicController"
+            int node:typeVersion = 2
+            custom double[] outputs:jointVelocityCommand
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (54.268143, 229.18117)
+        }
+
+        def OmniGraphNode "articulation_controller" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom double[] inputs:effortCommand
+            custom uint inputs:execIn (
+                customData = {
+                    bool isExecution = 1
+                }
+            )
+            prepend uint inputs:execIn.connect = </Graph/ROS_Control/on_playback_tick.outputs:tick>
+            custom int[] inputs:jointIndices
+            custom token[] inputs:jointNames
+            prepend token[] inputs:jointNames.connect = </Graph/ROS_Control/usd_setup_holonomic_robot.outputs:wheelDofNames>
+            custom double[] inputs:positionCommand
+            custom string inputs:robotPath
+            custom rel inputs:targetPrim = </myAGV_plus/Geometry/base_footprint/base_link> (
+                customData = {
+                    dictionary omni = {
+                        dictionary graph = {
+                            string relType = "target"
+                        }
+                    }
+                }
+            )
+            custom double[] inputs:velocityCommand
+            prepend double[] inputs:velocityCommand.connect = </Graph/ROS_Control/holonomic_controller.outputs:jointVelocityCommand>
+            token node:type = "isaacsim.core.nodes.IsaacArticulationController"
+            int node:typeVersion = 1
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (311.25504, 22.37869)
+        }
+
+        def OmniGraphNode "ros2_context" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom uchar inputs:domain_id
+            custom bool inputs:useDomainIDEnvVar = 1
+            token node:type = "isaacsim.ros2.bridge.ROS2Context"
+            int node:typeVersion = 2
+            custom uint64 outputs:context
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (313.8666, 393.02515)
+        }
+
+        def OmniGraphNode "ros2_subscribe_twist" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom uint64 inputs:context
+            prepend uint64 inputs:context.connect = </Graph/ROS_Control/ros2_context.outputs:context>
+            custom uint inputs:execIn (
+                customData = {
+                    bool isExecution = 1
+                }
+            )
+            prepend uint inputs:execIn.connect = </Graph/ROS_Control/on_playback_tick.outputs:tick>
+            custom string inputs:nodeNamespace
+            custom string inputs:qosProfile
+            custom uint64 inputs:queueSize
+            custom string inputs:topicName = "/cmd_vel"
+            token node:type = "isaacsim.ros2.bridge.ROS2SubscribeTwist"
+            int node:typeVersion = 1
+            custom vector3d outputs:angularVelocity
+            custom uint outputs:execOut (
+                customData = {
+                    bool isExecution = 1
+                }
+            )
+            custom vector3d outputs:linearVelocity
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (540.6259, 304.25607)
+        }
+
+        def OmniGraphNode "make_3_vector" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom token inputs:x
+            prepend token inputs:x.connect = </Graph/ROS_Control/linear_break_3_vector.outputs:x>
+            custom token inputs:y
+            prepend token inputs:y.connect = </Graph/ROS_Control/linear_break_3_vector.outputs:y>
+            custom token inputs:z
+            prepend token inputs:z.connect = </Graph/ROS_Control/angular_break_3_vector.outputs:z>
+            token node:type = "omni.graph.nodes.MakeVector3"
+            int node:typeVersion = 1
+            custom token outputs:tuple
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (658.2388, 626.5296)
+        }
+
+        def OmniGraphNode "linear_break_3_vector" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom token inputs:tuple
+            prepend token inputs:tuple.connect = </Graph/ROS_Control/ros2_subscribe_twist.outputs:linearVelocity>
+            token node:type = "omni.graph.nodes.BreakVector3"
+            int node:typeVersion = 1
+            custom token outputs:x
+            custom token outputs:y
+            custom token outputs:z
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (320.07355, 578.7002)
+        }
+
+        def OmniGraphNode "angular_break_3_vector" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom token inputs:tuple
+            prepend token inputs:tuple.connect = </Graph/ROS_Control/ros2_subscribe_twist.outputs:angularVelocity>
+            token node:type = "omni.graph.nodes.BreakVector3"
+            int node:typeVersion = 1
+            custom token outputs:x
+            custom token outputs:y
+            custom token outputs:z
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (320.8532, 742.8746)
+        }
+    }
+}

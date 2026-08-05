@@ -1,0 +1,964 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.3"
+    }
+    defaultPrim = "myAGV_plus"
+    doc = """Generated from Composed Stage of root layer /tmp/tmpahb_e02y/myAGV_plus.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_myagv_plus_isaac_rollers_cfhsr0et/usdex_myagv_plus_isaac_rollers/myAGV_plus.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_myagv_plus_isaac_rollers_cfhsr0et/temp_myagv_plus_isaac_rollers/myagv_plus_isaac_rollers.usd
+
+
+Generated from Composed Stage of root layer /home/elephant/humble_ws/src/myagv_plus_description/urdf/myagv_plus_isaac_rollers/payloads/base.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    subLayers = [
+        @./robot.usda@
+    ]
+    upAxis = "Z"
+)
+
+def Xform "myAGV_plus" (
+    prepend apiSchemas = ["GeomModelAPI"]
+    assetInfo = {
+        string name = "myAGV_plus"
+    }
+    kind = "component"
+)
+{
+    float3[] extentsHint = [(-0.16565903, -0.11965285, -0.0031311165), (0.16675282, 0.119652495, 0.13354832), (3.4028235e38, 3.4028235e38, 3.4028235e38), (-3.4028235e38, -3.4028235e38, -3.4028235e38), (3.4028235e38, 3.4028235e38, 3.4028235e38), (-3.4028235e38, -3.4028235e38, -3.4028235e38), (-0.16565903, -0.11203471, -0.004436916), (0.16675282, 0.11203471, 0.13354832)]
+
+    def Scope "Materials"
+    {
+    }
+
+    def Scope "Geometry"
+    {
+        def Xform "base_footprint"
+        {
+            def Xform "base_link"
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0.020476)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def Xform "base_link" (
+                    instanceable = true
+                    prepend references = @./instances.usda@</Instances/base_link>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                def Xform "laser_link"
+                {
+                    quatf xformOp:orient = (0.0000013267949, 0, 0, 1)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0.07471, 0, 0.094)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                    def Xform "laser_link" (
+                        instanceable = true
+                        prepend references = @./instances.usda@</Instances/laser_link>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, -0.0212)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Xform "laser_link_1" (
+                        displayName = "laser_link"
+                        instanceable = true
+                        prepend references = @./instances.usda@</Instances/laser_link_1>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, -0.0212)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+
+                def Xform "fl_wheel_link"
+                {
+                    quatf xformOp:orient = (1, 0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0.1165, 0.11942, 0.019524)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                    def Xform "wheel_fl_link" (
+                        instanceable = true
+                        prepend references = @./instances.usda@</Instances/wheel_fl_link>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Xform "fl_roller_0_link"
+                    {
+                        quatf xformOp:orient = (-0.3596961, 0.86838317, 0.13063435, 0.31537923)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0.024542118301450935, -0.018699, 0.02053495627649563)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Sphere "sphere" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        )
+                        {
+                            float3[] extent = [(-0.008, -0.008, -0.008), (0.008, 0.008, 0.008)]
+                            uniform token purpose = "guide"
+                            double radius = 0.008
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "fl_roller_1_link"
+                    {
+                        quatf xformOp:orient = (-0.29332417, 0.7081472, 0.24577945, 0.59336406)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0.005600737887208833, -0.018699, 0.03150605870493457)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Sphere "sphere" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        )
+                        {
+                            float3[] extent = [(-0.008, -0.008, -0.008), (0.008, 0.008, 0.008)]
+                            uniform token purpose = "guide"
+                            double radius = 0.008
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "fl_roller_2_link"
+                    {
+                        quatf xformOp:orient = (-0.19157304, 0.46249822, 0.3312799, 0.7997804)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (-0.015961290029726422, -0.018699, 0.027735126114495242)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Sphere "sphere" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        )
+                        {
+                            float3[] extent = [(-0.008, -0.008, -0.008), (0.008, 0.008, 0.008)]
+                            uniform token purpose = "guide"
+                            double radius = 0.008
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "fl_roller_3_link"
+                    {
+                        quatf xformOp:orient = (-0.06671537, 0.16106515, 0.37682313, 0.9097315)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (-0.030054852951773386, -0.018699, 0.010986619773491692)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Sphere "sphere" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        )
+                        {
+                            float3[] extent = [(-0.008, -0.008, -0.008), (0.008, 0.008, 0.008)]
+                            uniform token purpose = "guide"
+                            double radius = 0.008
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "fl_roller_4_link"
+                    {
+                        quatf xformOp:orient = (0.06618916, -0.15979476, 0.3769159, 0.9099555)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (-0.03008541615520161, -0.018699, -0.010902648062206453)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Sphere "sphere" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        )
+                        {
+                            float3[] extent = [(-0.008, -0.008, -0.008), (0.008, 0.008, 0.008)]
+                            uniform token purpose = "guide"
+                            double radius = 0.008
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "fl_roller_5_link"
+                    {
+                        quatf xformOp:orient = (0.1911103, -0.46138108, 0.33154708, 0.80042547)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (-0.01603867877745484, -0.018699, -0.027690445700161992)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Sphere "sphere" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        )
+                        {
+                            float3[] extent = [(-0.008, -0.008, -0.008), (0.008, 0.008, 0.008)]
+                            uniform token purpose = "guide"
+                            double radius = 0.008
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "fl_roller_6_link"
+                    {
+                        quatf xformOp:orient = (-0.29298073, 0.707318, -0.24618877, -0.59435225)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0.005512734650322474, -0.018699, -0.031521576049987315)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Sphere "sphere" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        )
+                        {
+                            float3[] extent = [(-0.008, -0.008, -0.008), (0.008, 0.008, 0.008)]
+                            uniform token purpose = "guide"
+                            double radius = 0.008
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "fl_roller_7_link"
+                    {
+                        quatf xformOp:orient = (-0.35951334, 0.867942, -0.13113646, -0.3165914)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0.024484678267992787, -0.018699, -0.020603410642728106)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Sphere "sphere" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        )
+                        {
+                            float3[] extent = [(-0.008, -0.008, -0.008), (0.008, 0.008, 0.008)]
+                            uniform token purpose = "guide"
+                            double radius = 0.008
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "fl_roller_8_link"
+                    {
+                        quatf xformOp:orient = (-0.38268334, 0.9238793, -0.0002671634, -0.00064498954)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0.031999968807181284, -0.018699, -0.00004468041433323347)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Sphere "sphere" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        )
+                        {
+                            float3[] extent = [(-0.008, -0.008, -0.008), (0.008, 0.008, 0.008)]
+                            uniform token purpose = "guide"
+                            double radius = 0.008
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+                }
+
+                def Xform "rl_wheel_link"
+                {
+                    quatf xformOp:orient = (1, 0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (-0.1165, 0.11942, 0.019524)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                    def Xform "wheel_rl_link" (
+                        instanceable = true
+                        prepend references = @./instances.usda@</Instances/wheel_rl_link>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Xform "rl_roller_0_link"
+                    {
+                        quatf xformOp:orient = (0.37737435, 0.9110623, -0.06352327, 0.15335873)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0.030236537198986863, -0.018699, 0.010476250198152189)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Sphere "sphere" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        )
+                        {
+                            float3[] extent = [(-0.008, -0.008, -0.008), (0.008, 0.008, 0.008)]
+                            uniform token purpose = "guide"
+                            double radius = 0.008
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "rl_roller_1_link"
+                    {
+                        quatf xformOp:orient = (0.33288965, 0.8036667, -0.18876198, 0.45571172)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0.016428527477095778, -0.018699, 0.027460944720353472)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Sphere "sphere" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        )
+                        {
+                            float3[] extent = [(-0.008, -0.008, -0.008), (0.008, 0.008, 0.008)]
+                            uniform token purpose = "guide"
+                            double radius = 0.008
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "rl_roller_2_link"
+                    {
+                        quatf xformOp:orient = (0.24825355, 0.5993371, -0.2912332, 0.70309913)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (-0.005066572834073539, -0.018699, 0.03159635801349624)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Sphere "sphere" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        )
+                        {
+                            float3[] extent = [(-0.008, -0.008, -0.008), (0.008, 0.008, 0.008)]
+                            uniform token purpose = "guide"
+                            double radius = 0.008
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "rl_roller_3_link"
+                    {
+                        quatf xformOp:orient = (0.13367441, 0.3227186, -0.3585774, 0.8656824)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (-0.024190967407494983, -0.018699, 0.020947484237719707)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Sphere "sphere" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        )
+                        {
+                            float3[] extent = [(-0.008, -0.008, -0.008), (0.008, 0.008, 0.008)]
+                            uniform token purpose = "guide"
+                            double radius = 0.008
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "rl_roller_4_link"
+                    {
+                        quatf xformOp:orient = (0.0029721633, 0.007175437, -0.3826719, 0.92385167)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (-0.031996139478294154, -0.018699, 0.0004970497817588658)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Sphere "sphere" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        )
+                        {
+                            float3[] extent = [(-0.008, -0.008, -0.008), (0.008, 0.008, 0.008)]
+                            uniform token purpose = "guide"
+                            double radius = 0.008
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "rl_roller_5_link"
+                    {
+                        quatf xformOp:orient = (-0.12808858, -0.3092332, -0.36061049, 0.87059075)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (-0.02482996228971899, -0.018699, -0.020185959791179934)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Sphere "sphere" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        )
+                        {
+                            float3[] extent = [(-0.008, -0.008, -0.008), (0.008, 0.008, 0.008)]
+                            uniform token purpose = "guide"
+                            double radius = 0.008
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "rl_roller_6_link"
+                    {
+                        quatf xformOp:orient = (-0.24369994, -0.5883437, -0.29505414, 0.7123237)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (-0.0060455697914918735, -0.018699, -0.03142373443587189)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Sphere "sphere" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        )
+                        {
+                            float3[] extent = [(-0.008, -0.008, -0.008), (0.008, 0.008, 0.008)]
+                            uniform token purpose = "guide"
+                            double radius = 0.008
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "rl_roller_7_link"
+                    {
+                        quatf xformOp:orient = (0.3299175, 0.79649127, 0.19390991, -0.46813995)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0.015567612001198381, -0.018699, -0.027957994502112345)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Sphere "sphere" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        )
+                        {
+                            float3[] extent = [(-0.008, -0.008, -0.008), (0.008, 0.008, 0.008)]
+                            uniform token purpose = "guide"
+                            double radius = 0.008
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "rl_roller_8_link"
+                    {
+                        quatf xformOp:orient = (0.37634215, 0.9085703, 0.06937729, -0.16749159)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0.029896535123792537, -0.018699, -0.01141039822231631)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Sphere "sphere" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        )
+                        {
+                            float3[] extent = [(-0.008, -0.008, -0.008), (0.008, 0.008, 0.008)]
+                            uniform token purpose = "guide"
+                            double radius = 0.008
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+                }
+
+                def Xform "fr_wheel_link"
+                {
+                    quatf xformOp:orient = (1, 0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0.1165, -0.11942, 0.019524)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                    def Xform "wheel_fr_link" (
+                        instanceable = true
+                        prepend references = @./instances.usda@</Instances/wheel_fr_link>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Xform "fr_roller_0_link"
+                    {
+                        quatf xformOp:orient = (0.37744066, 0.9112224, -0.06312805, 0.15240459)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0.030258412273929797, 0.018699, 0.0104129000120473)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Sphere "sphere" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        )
+                        {
+                            float3[] extent = [(-0.008, -0.008, -0.008), (0.008, 0.008, 0.008)]
+                            uniform token purpose = "guide"
+                            double radius = 0.008
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "fr_roller_1_link"
+                    {
+                        quatf xformOp:orient = (0.33308715, 0.8041435, -0.18841328, 0.45486987)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0.016486005471398182, 0.018699, 0.027426476689451553)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Sphere "sphere" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        )
+                        {
+                            float3[] extent = [(-0.008, -0.008, -0.008), (0.008, 0.008, 0.008)]
+                            uniform token purpose = "guide"
+                            double radius = 0.008
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "fr_roller_2_link"
+                    {
+                        quatf xformOp:orient = (0.2485584, 0.60007304, -0.29097307, 0.70247114)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (-0.005000386512742503, 0.018699, 0.031606900112525795)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Sphere "sphere" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        )
+                        {
+                            float3[] extent = [(-0.008, -0.008, -0.008), (0.008, 0.008, 0.008)]
+                            uniform token purpose = "guide"
+                            double radius = 0.008
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "fr_roller_3_link"
+                    {
+                        quatf xformOp:orient = (0.13404985, 0.32362494, -0.35843724, 0.86534405)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (-0.02414704207446515, 0.018699, 0.020998103701382415)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Sphere "sphere" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        )
+                        {
+                            float3[] extent = [(-0.008, -0.008, -0.008), (0.008, 0.008, 0.008)]
+                            uniform token purpose = "guide"
+                            double radius = 0.008
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "fr_roller_4_link"
+                    {
+                        quatf xformOp:orient = (0.0033728946, 0.008142889, -0.38266855, 0.9238436)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (-0.03199502828506586, 0.018699, 0.0005640612004343076)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Sphere "sphere" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        )
+                        {
+                            float3[] extent = [(-0.008, -0.008, -0.008), (0.008, 0.008, 0.008)]
+                            uniform token purpose = "guide"
+                            double radius = 0.008
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "fr_roller_5_link"
+                    {
+                        quatf xformOp:orient = (-0.12771088, -0.30832133, -0.36074442, 0.8709141)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (-0.024872185175953316, 0.018699, -0.02013391180503898)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Sphere "sphere" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        )
+                        {
+                            float3[] extent = [(-0.008, -0.008, -0.008), (0.008, 0.008, 0.008)]
+                            uniform token purpose = "guide"
+                            double radius = 0.008
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "fr_roller_6_link"
+                    {
+                        quatf xformOp:orient = (-0.24339083, -0.5875974, -0.2953092, 0.71293944)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (-0.00611137019946464, 0.018699, -0.03141100371342972)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Sphere "sphere" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        )
+                        {
+                            float3[] extent = [(-0.008, -0.008, -0.008), (0.008, 0.008, 0.008)]
+                            uniform token purpose = "guide"
+                            double radius = 0.008
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "fr_roller_7_link"
+                    {
+                        quatf xformOp:orient = (0.32971427, 0.7960006, 0.19425529, -0.4689738)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0.015509022813667693, 0.018699, -0.027990537889885845)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Sphere "sphere" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        )
+                        {
+                            float3[] extent = [(-0.008, -0.008, -0.008), (0.008, 0.008, 0.008)]
+                            uniform token purpose = "guide"
+                            double radius = 0.008
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "fr_roller_8_link"
+                    {
+                        quatf xformOp:orient = (0.37626928, 0.9083944, 0.06977135, -0.16844295)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0.02987257168869582, 0.018699, -0.011472988307486815)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Sphere "sphere" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        )
+                        {
+                            float3[] extent = [(-0.008, -0.008, -0.008), (0.008, 0.008, 0.008)]
+                            uniform token purpose = "guide"
+                            double radius = 0.008
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+                }
+
+                def Xform "rr_wheel_link"
+                {
+                    quatf xformOp:orient = (1, 0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (-0.1165, -0.11942, 0.019524)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                    def Xform "wheel_rr_link" (
+                        instanceable = true
+                        prepend references = @./instances.usda@</Instances/wheel_rr_link>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Xform "rr_roller_0_link"
+                    {
+                        quatf xformOp:orient = (-0.38124752, 0.9204129, 0.033120174, 0.07995918)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0.031520613416186775, 0.018699, 0.005518236119205675)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Sphere "sphere" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        )
+                        {
+                            float3[] extent = [(-0.008, -0.008, -0.008), (0.008, 0.008, 0.008)]
+                            uniform token purpose = "guide"
+                            double radius = 0.008
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "rr_roller_1_link"
+                    {
+                        quatf xformOp:orient = (-0.3469277, 0.83755755, 0.16151711, 0.3899368)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0.020599136946421247, 0.018699, 0.024488273868580105)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Sphere "sphere" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        )
+                        {
+                            float3[] extent = [(-0.008, -0.008, -0.008), (0.008, 0.008, 0.008)]
+                            uniform token purpose = "guide"
+                            double radius = 0.008
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "rr_roller_2_link"
+                    {
+                        quatf xformOp:orient = (-0.2707633, 0.65368044, 0.2704327, 0.6528823)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0.00003909536551887472, 0.018699, 0.031999976117997264)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Sphere "sphere" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        )
+                        {
+                            float3[] extent = [(-0.008, -0.008, -0.008), (0.008, 0.008, 0.008)]
+                            uniform token purpose = "guide"
+                            double radius = 0.008
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "rr_roller_3_link"
+                    {
+                        quatf xformOp:orient = (-0.16194084, 0.39095977, 0.3467301, 0.83708054)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (-0.02053923937140636, 0.018699, 0.024538533901683507)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Sphere "sphere" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        )
+                        {
+                            float3[] extent = [(-0.008, -0.008, -0.008), (0.008, 0.008, 0.008)]
+                            uniform token purpose = "guide"
+                            double radius = 0.008
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "rr_roller_4_link"
+                    {
+                        quatf xformOp:orient = (-0.033585932, 0.08108361, 0.38120675, 0.92031455)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (-0.031507035738231624, 0.018699, 0.005595238957345353)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Sphere "sphere" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        )
+                        {
+                            float3[] extent = [(-0.008, -0.008, -0.008), (0.008, 0.008, 0.008)]
+                            uniform token purpose = "guide"
+                            double radius = 0.008
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "rr_roller_5_link"
+                    {
+                        quatf xformOp:orient = (0.09881994, -0.23857243, 0.36970425, 0.892545)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (-0.02773233992144041, 0.018699, -0.015966130479289044)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Sphere "sphere" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        )
+                        {
+                            float3[] extent = [(-0.008, -0.008, -0.008), (0.008, 0.008, 0.008)]
+                            uniform token purpose = "guide"
+                            double radius = 0.008
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "rr_roller_6_link"
+                    {
+                        quatf xformOp:orient = (0.21930666, -0.52945316, 0.31360993, 0.7571214)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (-0.010981374044780438, 0.018699, -0.03005677002088918)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Sphere "sphere" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        )
+                        {
+                            float3[] extent = [(-0.008, -0.008, -0.008), (0.008, 0.008, 0.008)]
+                            uniform token purpose = "guide"
+                            double radius = 0.008
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "rr_roller_7_link"
+                    {
+                        quatf xformOp:orient = (-0.31334177, 0.75647396, -0.21968965, -0.53037775)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0.010907898791810363, 0.018699, -0.030083512825925467)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Sphere "sphere" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        )
+                        {
+                            float3[] extent = [(-0.008, -0.008, -0.008), (0.008, 0.008, 0.008)]
+                            uniform token purpose = "guide"
+                            double radius = 0.008
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "rr_roller_8_link"
+                    {
+                        quatf xformOp:orient = (-0.36958325, 0.89225286, -0.09927154, -0.2396627)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0.02769324455592152, 0.018699, -0.016033845638708234)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Sphere "sphere" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI"]
+                        )
+                        {
+                            float3[] extent = [(-0.008, -0.008, -0.008), (0.008, 0.008, 0.008)]
+                            uniform token purpose = "guide"
+                            double radius = 0.008
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+                }
+
+                def Xform "base_link_1" (
+                    displayName = "base_link"
+                    instanceable = true
+                    prepend references = @./instances.usda@</Instances/base_link_1>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                def Xform "imu_link"
+                {
+                    quatf xformOp:orient = (0.70714086, 0, 0, 0.7070727)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0.02)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                def Xform "camera_link"
+                {
+                    quatf xformOp:orient = (1, 0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0.15991, 0, 0.051)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+            }
+        }
+    }
+
+    def Scope "Physics"
+    {
+    }
+
+    def Scope "VisualMaterials"
+    {
+    }
+}
+

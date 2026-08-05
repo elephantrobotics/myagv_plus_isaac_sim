@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="wheel" params="side wheel_radius">
+
+    <xacro:property name="wheel_separation_x" value="0.233" />
+    <xacro:property name="wheel_separation_y" value="0.23884" />
+    <xacro:property name="wheel_thickness" value="0.036" />
+    <xacro:property name="mass" value="0.074" />
+
+    <xacro:property name="ixx" value="0.000041" />
+    <xacro:property name="iyy" value="0.000067" />
+    <xacro:property name="izz" value="0.000041" />
+
+    <xacro:if value="${side == 'fl'}">
+      <xacro:property name="x" value="${wheel_separation_x/2.0}" />
+      <xacro:property name="y" value="${wheel_separation_y/2.0}" />
+      <xacro:property name="mesh" value="package://myagv_plus_description/meshes/wheel_fl_link.stl" />
+      <xacro:property name="visual_rotation" value="${0.0}" />
+    </xacro:if>
+    <xacro:if value="${side == 'fr'}">
+      <xacro:property name="x" value="${wheel_separation_x/2.0}" />
+      <xacro:property name="y" value="${-wheel_separation_y/2.0}" />
+      <xacro:property name="mesh" value="package://myagv_plus_description/meshes/wheel_fr_link.stl" />
+      <xacro:property name="visual_rotation" value="${0.0}" />
+    </xacro:if>
+    <xacro:if value="${side == 'rl'}">
+      <xacro:property name="x" value="${-wheel_separation_x/2.0}" />
+      <xacro:property name="y" value="${wheel_separation_y/2.0}" />
+      <xacro:property name="mesh" value="package://myagv_plus_description/meshes/wheel_rl_link.stl" />
+      <xacro:property name="visual_rotation" value="${0.0}" />
+    </xacro:if>
+    <xacro:if value="${side == 'rr'}">
+      <xacro:property name="x" value="${-wheel_separation_x/2.0}" />
+      <xacro:property name="y" value="${-wheel_separation_y/2.0}" />
+      <xacro:property name="mesh" value="package://myagv_plus_description/meshes/wheel_rr_link.stl" />
+      <xacro:property name="visual_rotation" value="${0.0}" />
+    </xacro:if>
+
+    <joint name="${side}_wheel_joint" type="continuous">
+      <parent link="base_link" />
+      <child link="${side}_wheel_link" />
+      <origin xyz="${x} ${y} 0.019524" rpy="0.0 0.0 0.0" />
+      <axis xyz="0.0 1.0 0.0" />
+      <limit effort="1.35" velocity="40.0" />
+      <dynamics damping="0.001" friction="0.001" />
+    </joint>
+
+    <link name="${side}_wheel_link">
+      <visual>
+        <geometry>
+          <mesh filename="${mesh}" />
+        </geometry>
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 ${visual_rotation}" />
+        <material name="">
+          <color rgba="1 1 1 1" />
+        </material>
+      </visual>
+
+      <collision>
+        <geometry>
+          <mesh filename="${mesh}" />
+        </geometry>
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      </collision>
+
+      <inertial>
+        <mass value="${mass}" />
+        <inertia ixx="${ixx}" ixy="0.0"    ixz="0.0"
+                              iyy="${iyy}" iyz="0.0"
+                                           izz="${izz}" />
+      </inertial>
+    </link>
+
+  </xacro:macro>
+</robot>
