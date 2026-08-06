@@ -1397,7 +1397,7 @@ def PhysicsScene "PhysicsScene" (
     prepend apiSchemas = ["NewtonSceneAPI", "PhysxSceneAPI"]
 )
 {
-    uint physxScene:timeStepsPerSecond = 60
+    uint physxScene:timeStepsPerSecond = 240
 }
 
 def Xform "GroundPlane" (
