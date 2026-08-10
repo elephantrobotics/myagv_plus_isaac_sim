@@ -1,39 +1,40 @@
-# myAGV Plus Isaac Sim 仿真环境搭建
+# myAGV Plus Isaac Sim Simulation Setup
 
-分两步：先装 Isaac Sim 6.0.1（含驱动），再部署本仓库提供的 myAGV Plus 仿真案例（`humble_ws` + 离线场景包）。
+[简体中文](README_CN.md)
+
+Two steps: install Isaac Sim 6.0.1 (including the GPU driver), then deploy the myAGV Plus simulation package provided by this repository (`humble_ws` + the offline scene pack).
 
 ---
 
-## 一、安装 Isaac Sim 6.0.1
+## 1. Install Isaac Sim 6.0.1
 
-**系统要求**：Ubuntu 22.04 x86_64，NVIDIA 独显（RTX 系列），预留至少 50GB 磁盘空间。
+**System requirements**: Ubuntu 22.04 x86_64, NVIDIA discrete GPU (RTX series), at least 50 GB of free disk space.
 
-### 1*. 检查 / 安装 NVIDIA 驱动
+### 1.1 Check / install the NVIDIA driver
 
-先检查机器上是不是已经有能用的驱动：
+First check whether a working driver is already installed:
 
 ```bash
 nvidia-smi
 ```
 
-能正常显示显卡型号和驱动版本，**直接跳到「2. 下载并安装 Isaac Sim 6.0.1」，不用再装驱动**。
+If it prints your GPU model and driver version, **skip ahead to "1.2 Download and install Isaac Sim 6.0.1" — do not install a driver.**
 
-> ⚠️ **非必要不要装驱动**。Isaac Sim 对驱动具体版本不敏感，机器上现有的驱动只要能跑就够用，不是非得装成 595.58.03 这个版本不可。反而是**重复安装驱动**本身容易出问题——如果机器上同时存在系统自带/apt 装的驱动和另外手动装的驱动，会导致同一张 GPU 被注册两次（Vulkan ICD 冲突），装之前确认真的没有可用驱动再装。
+> ⚠️ **Do not install a driver unless you have to.** Isaac Sim is not sensitive to the exact driver version; whatever already works on the machine is good enough, and 595.58.03 is not required. Installing a *second* driver is what causes trouble: if a distro/apt driver and a manually installed driver are both present, the same GPU gets registered twice (Vulkan ICD conflict). Confirm there is genuinely no working driver before installing one.
 
-如果 `nvidia-smi` 报错、确认没有可用驱动，再按下面手动装：
+If `nvidia-smi` fails and you have confirmed there is no working driver, install it manually:
 
-下载（百度网盘）：
+Download (Baidu Netdisk):
 
-- 通过网盘分享的文件：myAGV_Plus_Isaac_Sim资料下载
-  链接: https://pan.baidu.com/s/1kBYK1mUhGqRrWju3glO2nQ?pwd=rdit 
-  --来自百度网盘超级会员v9的分享
-- 文件：`NVIDIA-Linux-x86_64-595.58.03.run`
+- Shared folder: myAGV_Plus_Isaac_Sim资料下载
+  Link: https://pan.baidu.com/s/1kBYK1mUhGqRrWju3glO2nQ?pwd=rdit
+- File: `NVIDIA-Linux-x86_64-595.58.03.run`
 
 ```bash
 chmod +x NVIDIA-Linux-x86_64-595.58.03.run
 ```
 
-切到真实 TTY（`Ctrl+Alt+F3`）或从其他设备 SSH 进来操作——下一步会停掉图形界面，本地桌面会黑屏：
+Switch to a real TTY (`Ctrl+Alt+F3`) or connect over SSH from another machine — the next step stops the display manager, so the local desktop will go black:
 
 ```bash
 sudo systemctl isolate multi-user.target
@@ -41,35 +42,35 @@ sudo systemctl stop display-manager
 sudo ./NVIDIA-Linux-x86_64-595.58.03.run
 ```
 
-安装器选项：
+Installer options:
 
-| 提示 | 选择 |
+| Prompt | Choose |
 |---|---|
 | Kernel module type: Proprietary / Open / GPL | **Proprietary** |
 | Install 32-bit compatibility libraries? | **No** |
 | Register kernel module sources with DKMS? | **Yes** |
 | Run `nvidia-xconfig`? | **No** |
-| 提示 nouveau 冲突、要不要禁用并重建 initramfs | **Yes** |
+| Prompt about a nouveau conflict / rebuilding initramfs | **Yes** |
 
 ```bash
 sudo reboot
 ```
 
-重启后验证：
+Verify after rebooting:
 
 ```bash
 nvidia-smi
 ```
 
-能正常显示显卡型号和驱动版本即成功。
+Success means it prints your GPU model and driver version.
 
-### 2. 下载并安装 Isaac Sim 6.0.1
+### 1.2 Download and install Isaac Sim 6.0.1
 
-前往官方下载页面，在 **Latest Release** 表格里点 **Linux (x86_64)**，下载 `isaac-sim-standalone-6.0.1-linux-x86_64.zip`：
+Open the official download page, find the **Latest Release** table, click **Linux (x86_64)**, and download `isaac-sim-standalone-6.0.1-linux-x86_64.zip`:
 
 <https://docs.isaacsim.omniverse.nvidia.com/6.0.1/installation/download.html#isaac-sim-latest-release>
 
-> 请从官方页面获取下载链接并确认许可协议——安装包本身不随本仓库分发。页面同时给出了 MD5 校验值，下载完可以顺手核对一下文件完整性。
+> Get the download from the official page and accept the license there — the installer itself is not redistributed with this repository. The page also lists an MD5 checksum; verifying the downloaded file against it is worth the few seconds.
 
 ```bash
 mkdir ~/isaacsim
@@ -79,24 +80,24 @@ cd ~/isaacsim
 ./isaac-sim.sh
 ```
 
-首次启动会编译着色器缓存，耗时较久，属正常现象。
+The first launch takes a while because the shader cache is being compiled. This is expected.
 
-### 3. Compatibility Checker
+### 1.3 Compatibility Checker
 
 ```bash
 cd ~/isaacsim
 ./isaac-sim.compatibility_check.sh
 ```
 
-看到 `System checking result: PASSED` 再继续下一步。如果没通过，或 `nvidia-smi` 报错，见下方「常见问题」。
+Wait for `System checking result: PASSED` before continuing. If it fails, or if `nvidia-smi` reports an error, see "Troubleshooting" below.
 
 ---
 
-## 二、部署 myAGV Plus 仿真案例
+## 2. Deploy the myAGV Plus simulation package
 
-**1. 获取 `humble_ws`（ROS2 工作空间源码）：**
+**2.1 Get `humble_ws` (the ROS 2 workspace source):**
 
-仓库根目录下已经是 `humble_ws/` 子目录结构，克隆后把它复制到 `$HOME` 下：
+The repository already contains a `humble_ws/` subdirectory, so move it to `$HOME` after cloning:
 
 ```bash
 cd ~
@@ -105,7 +106,7 @@ mv myagv_plus_isaac_sim/humble_ws ~/humble_ws
 rm -rf myagv_plus_isaac_sim
 ```
 
-安装 ROS2 依赖：
+Install the ROS 2 dependencies:
 
 ```bash
 sudo apt install -y ros-humble-geographic-msgs ros-humble-aruco-markers-msgs \
@@ -113,7 +114,7 @@ sudo apt install -y ros-humble-geographic-msgs ros-humble-aruco-markers-msgs \
   ros-humble-geometry-msgs ros-humble-common-interfaces
 ```
 
-编译：
+Build:
 
 ```bash
 cd ~/humble_ws
@@ -122,37 +123,36 @@ echo "source ~/humble_ws/install/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```
 
-**2. 获取离线场景包：**
+**2.2 Get the offline scene pack:**
 
-下载（百度网盘）：
+Download (Baidu Netdisk):
 
-- 通过网盘分享的文件：myAGV_Plus_Isaac_Sim资料下载
-  链接: https://pan.baidu.com/s/1kBYK1mUhGqRrWju3glO2nQ?pwd=rdit 
-  --来自百度网盘超级会员v9的分享
-- 文件：`scenes.zip`
+- Shared folder: myAGV_Plus_Isaac_Sim资料下载
+  Link: https://pan.baidu.com/s/1kBYK1mUhGqRrWju3glO2nQ?pwd=rdit
+- File: `scenes.zip`
 
-解压到 `~/isaacsim`：
+Extract into `~/isaacsim`:
 
 ```bash
 unzip -o scenes.zip -d ~/isaacsim
 ```
 
-解压后应得到 `~/isaacsim/scenes/` 目录，包含 4 套环境的 usda 与本地化资产。
+You should end up with a `~/isaacsim/scenes/` directory containing the USDA files and localized assets for 4 environments.
 
 ---
 
-## 常见问题
+## Troubleshooting
 
-| 现象 | 原因 | 处理 |
+| Symptom | Cause | Fix |
 |---|---|---|
-| `nvidia-smi` 报 "couldn't communicate with the NVIDIA driver"，`dkms status` 能查到内核版本但对不上 `uname -r` | 内核自动升级后 DKMS 没针对新内核重编 | `sudo dkms autoinstall` 后 `sudo modprobe nvidia` |
-| `nvidia-smi` 报错，且 `dkms status` 提示找不到命令 | 驱动和 DKMS 没装或被卸载 | `sudo apt install dkms linux-headers-$(uname -r)`，再重新执行上面「检查 / 安装 NVIDIA 驱动」的步骤 |
-| 驱动装完 `nvidia-smi` 还是不通，`lspci -k` 显卡那行看不到 `Kernel driver in use: nvidia` | 可能是 Secure Boot 拦截了未签名的专有内核模块 | `mokutil --sb-state` 确认；若为 enabled，按驱动安装器提示走 MOK 签名注册（重启后蓝屏界面按提示操作），或去 BIOS 关闭 Secure Boot 后重装 |
-| RTX Lidar / 渲染阶段报 `cudaErrorNoDevice` 等 CUDA 错误 | 驱动版本过旧或加载失败 | 先确认 `nvidia-smi` 正常，再跑 Compatibility Checker |
-| Isaac 启动日志报 `[Error] [omni.rtx] Multiple Installable Client Drivers (ICDs) are found for the same GPU`；主界面画面正常，但 RTX 传感器（雷达等）没有数据 | 系统同时存在多套 NVIDIA 驱动（apt 装的 + 手动 `.run` 装的），GPU 被重复注册 | 见下方「多套驱动冲突」 |
-| 打开场景报 `Failed to read texture ...amazonaws...` | 该场景仍引用云端资产，机器无法访问外网 | 使用本仓库提供的离线场景包（已本地化），不要用未 Collect 的开发版场景 |
+| `nvidia-smi` reports "couldn't communicate with the NVIDIA driver", and `dkms status` lists kernel versions that do not match `uname -r` | The kernel was auto-upgraded and DKMS never rebuilt the module for it | `sudo dkms autoinstall`, then `sudo modprobe nvidia` |
+| `nvidia-smi` fails and `dkms status` reports command not found | The driver and DKMS are missing or were removed | `sudo apt install dkms linux-headers-$(uname -r)`, then redo "1.1 Check / install the NVIDIA driver" above |
+| Driver installed but `nvidia-smi` still fails, and `lspci -k` does not show `Kernel driver in use: nvidia` for the GPU | Secure Boot may be rejecting the unsigned proprietary kernel module | Check with `mokutil --sb-state`; if enabled, complete the MOK enrollment the installer offers (follow the blue screen after reboot), or disable Secure Boot in the BIOS and reinstall |
+| CUDA errors such as `cudaErrorNoDevice` during RTX Lidar or rendering | Driver too old, or it failed to load | Confirm `nvidia-smi` works first, then run the Compatibility Checker |
+| Isaac's startup log shows `[Error] [omni.rtx] Multiple Installable Client Drivers (ICDs) are found for the same GPU`; the main viewport renders fine but RTX sensors (lidar, etc.) produce no data | Multiple NVIDIA drivers are installed (apt plus a manual `.run`), so the GPU is registered twice | See "Conflicting drivers" below |
+| Opening a scene reports `Failed to read texture ...amazonaws...` | That scene still references cloud assets and the machine has no internet access | Use the offline scene pack from this repository (already localized); do not use the un-collected development scenes |
 
-**多套驱动冲突**：如果之前系统里已经装过驱动（比如用过 Ubuntu「软件更新」里的 Additional Drivers），装完本文档的 `.run` 驱动后可能会两套同时存在。检查：
+**Conflicting drivers**: if a driver was already installed (for example via Ubuntu's "Software & Updates" → Additional Drivers), installing the `.run` driver from this document can leave two of them in place. Check:
 
 ```bash
 ls /etc/vulkan/icd.d/ | grep nvidia
@@ -160,7 +160,7 @@ ls /usr/share/vulkan/icd.d/ | grep nvidia
 dpkg -l | grep -i nvidia
 ```
 
-如果两个目录都能找到 `nvidia_icd.json`，且 `dpkg -l` 里能看到 `nvidia-driver-xxx`、`libnvidia-*-xxx` 这类系统包，说明系统自带的驱动和手动装的 `.run` 驱动同时存在，需要卸掉系统自带那一套，只保留 `.run` 装的：
+If `nvidia_icd.json` shows up in both directories and `dpkg -l` lists system packages such as `nvidia-driver-xxx` or `libnvidia-*-xxx`, both the distro driver and the manual `.run` driver are installed. Remove the distro one and keep only the `.run` driver:
 
 ```bash
 sudo apt purge '^nvidia-.*' '^libnvidia-.*' '^xserver-xorg-video-nvidia-.*' \
@@ -170,4 +170,4 @@ sudo apt autoremove
 sudo reboot
 ```
 
-重启后再跑一次 `nvidia-smi` 确认驱动还正常。这一步不会动到 `.run` 装的驱动，它不受 apt 管理。
+Run `nvidia-smi` again after rebooting to confirm the driver still works. This does not touch the `.run` driver, which is not managed by apt.
